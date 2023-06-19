@@ -5,8 +5,11 @@ export default {
 		extend: {
 			colors: {
 				brown: '#4E3505'
+			},
+			fontFamily: {
+				playfair: ['Playfair Display', 'serif']
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('prettier-plugin-tailwindcss')]
 };

@@ -1,16 +1,24 @@
 <script>
-  import "../app.css";
-    import logo from '$lib/assets/tbm-logo.png';
+	import '../app.css';
+	import logo from '$lib/assets/tbm-logo.png';
 </script>
 
-<header class="max-w-6xl xl:max-w-screen-2xl mx-auto flex items-center gap-10 justify-between py-4 px-4">
-  <img alt="TBM logo" src={logo} class="h-16 w-[12rem] object-cover" />
+<header class="container flex items-center justify-between gap-10 py-4">
+	<img alt="TBM logo" src={logo} class="h-16 w-[12rem] object-cover" />
 
-  <div class="flex items-center gap-4">
-    <a href="/#about">About</a>
-  </div>
+	<div class="flex items-center gap-4">
+		<a href="/#about">About</a>
+	</div>
 </header>
-<slot />
 
+<main class="flex-1">
+	<slot />
+</main>
 
-<footer>Footer</footer>
+<footer class="container mt-20 flex items-center justify-between gap-10 py-4">
+	<p>Copyright. 2023</p>
+	<p>
+		A <a href="https://www.soplugged.com" target="_blank" class="text-brown underline">SoPlugged</a>
+		production
+	</p>
+</footer>
