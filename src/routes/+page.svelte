@@ -1,4 +1,6 @@
 <script>
+	import clsx from 'clsx';
+
 	import hostPortrait from '$lib/assets/nina.jpeg';
 	import yourHost from '$lib/assets/your_host.png';
 	import decor1 from '$lib/assets/decor-1.png';
@@ -7,32 +9,29 @@
 	import google_podcast from '$lib/assets/google_podcast.png';
 	import apple_podcast from '$lib/assets/apple_podcast.png';
 
-	const recentEpisodes = [
-		{
-			guestName: 'Peace Friths',
-			guestImage:
-				'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG90cmFpdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-			title: 'Overcoming Grassroots challenges'
-		},
-		{
-			guestName: 'Ricah Mich',
-			guestImage:
-				'https://images.unsplash.com/photo-1634746715098-6cafbc6a7a00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvdHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-			title: 'Bridging the customer-owner gap'
-		},
-		{
-			guestName: 'Toni Ronke',
-			guestImage:
-				'https://images.unsplash.com/photo-1546791737-97c81ec08179?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHBvdHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-			title: 'Safely scaling up your business'
-		}
-	];
+	import AudioPlayer from '$lib/components/AudioPlayer.svelte';
 
 	const platforms = [
 		{ image: spotify, title: 'Spotify', href: '#' },
 		{ image: apple_podcast, title: 'Apple podcast', href: '#' },
 		{ image: google_podcast, title: 'Google podcast', href: '#' }
 	];
+
+	export let data;
+
+	let audioSrc = data.recentEpisodes[0].audio;
+
+	let activeEpisode = data.recentEpisodes[0].number;
+
+	/**
+	 * @param {import('$lib/types').Episode} episode
+	 */
+	const handleEpisodeClick = (episode) => {
+		audioSrc = episode.audio;
+		activeEpisode = episode.number;
+	};
+
+	let isPlaying;
 </script>
 
 <svelte:head>
@@ -40,7 +39,7 @@
 </svelte:head>
 
 <div class="relative">
-	<img src={decor1} alt="" class="absolute right-0 top-20 h-full" />
+	<img src={decor2} alt="" class="pointer-events-none absolute left-0 top-20 -z-10 h-full" />
 	<div class="container grid items-center gap-10 py-4 lg:grid-cols-5 xl:gap-20">
 		<div class="max-w-2xl py-10 lg:col-span-3 lg:py-20 xl:py-28">
 			<h1 class="mb-4 max-w-lg text-4xl font-bold text-brown xl:text-6xl">
@@ -77,20 +76,59 @@
 			</div>
 		</div>
 
-		<div class="lg:col-span-2">
+		<div class="aspect-square rounded-xl bg-white p-4 pt-8 shadow-sm shadow-primary lg:col-span-2">
 			<p>RECENT EPISODES</p>
-			<ul class="mt-6">
-				{#each recentEpisodes as episode}
-					<li class="inline-flex items-center gap-4 border-b py-3 last-of-type:border-none">
-						<img
-							src={episode.guestImage}
-							alt=""
-							class="aspect-square w-10 overflow-hidden rounded-lg object-cover object-top"
-						/>
-						<div>
-							<p>{episode.guestName}</p>
-							<p class="font-playfair text-lg font-bold text-brown lg:text-xl">{episode.title}</p>
-						</div>
+			<ul class="mt-6 flex flex-col gap-2">
+				{#each data.recentEpisodes as episode}
+					<li
+						class={clsx(
+							'group relative rounded-xl border-b border-brown/10 transition duration-150 last-of-type:border-none hover:border-transparent',
+							episode.number === activeEpisode && 'border-none bg-primary/30',
+							episode.audio && 'hover:bg-primary/20'
+						)}
+					>
+						<a
+							href={episode.audio ? `/episodes/${episode.slug}` : ''}
+							class={`group inline-flex w-full items-center gap-4 overflow-hidden p-4 py-3 ${
+								episode.audio ? '' : ' pointer-events-none'
+							}`}
+						>
+							<img
+								src={episode.guest.photo}
+								alt=""
+								class="aspect-square w-10 flex-shrink-0 overflow-hidden rounded-lg border border-brown/30 object-cover object-top"
+							/>
+							<div>
+								<p>{episode.guest.name}</p>
+								<p
+									class="line-clamp-1 w-full font-playfair text-lg font-bold text-brown lg:text-xl"
+								>
+									{episode.title}
+								</p>
+							</div>
+						</a>
+
+						{#if episode.audio}
+							<button
+								class="absolute left-4 top-1/2 z-10 flex aspect-square w-10 -translate-y-1/2 items-center justify-center rounded-lg bg-primary opacity-0 transition-all duration-150 group-hover:opacity-100"
+								on:click={() => handleEpisodeClick(episode)}
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									class="h-6 w-6"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+									/>
+								</svg>
+							</button>
+						{/if}
 					</li>
 				{/each}
 			</ul>
@@ -99,8 +137,6 @@
 </div>
 
 <div class="relative mt-12">
-	<img src={decor2} alt="" class="absolute left-0 top-0 w-1/3 max-w-[24rem]" />
-
 	<div class="container grid items-center gap-10 lg:grid-cols-5 lg:gap-20">
 		<div class="lg:col-span-3">
 			<h2 class="text-2xl font-bold text-brown lg:text-3xl">About the podcast</h2>
@@ -139,3 +175,9 @@
 		</div>
 	</div>
 </div>
+
+{#if audioSrc}
+	{#key audioSrc}
+		<AudioPlayer src={audioSrc} isPlaying />
+	{/key}
+{/if}

@@ -4,7 +4,8 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				brown: '#4E3505'
+				brown: '#4E3505',
+				primary: '#EDB18B'
 			},
 			fontFamily: {
 				playfair: ['Playfair Display', 'serif']
