@@ -8,8 +8,10 @@
 	import spotify from '$lib/assets/spotify.png';
 	import google_podcast from '$lib/assets/google_podcast.png';
 	import apple_podcast from '$lib/assets/apple_podcast.png';
+	import thumbnail from '$lib/assets/thumbnail.jpg';
 
 	import AudioPlayer from '$lib/components/AudioPlayer.svelte';
+	import { pad } from '$lib/utils/pad';
 
 	const platforms = [
 		{ image: spotify, title: 'Spotify', href: '#' },
@@ -90,7 +92,7 @@
 						<a
 							href={episode.audio ? `/episodes/${episode.slug}` : ''}
 							class={`group inline-flex w-full items-center gap-4 overflow-hidden p-4 py-3 ${
-								episode.audio ? '' : ' pointer-events-none'
+								episode.audio ? '' : ' pointer-events-none opacity-50'
 							}`}
 						>
 							<img
@@ -99,11 +101,17 @@
 								class="aspect-square w-10 flex-shrink-0 overflow-hidden rounded-lg border border-brown/30 object-cover object-top"
 							/>
 							<div>
-								<p>{episode.guest.name}</p>
+								{#if episode.audio}
+									<p>EP. {pad(episode.number)} - {episode.guest.name}</p>
+								{/if}
+
+								{#if !episode.audio}
+									<p>EP. {pad(episode.number)}</p>
+								{/if}
 								<p
 									class="line-clamp-1 w-full font-playfair text-lg font-bold text-brown lg:text-xl"
 								>
-									{episode.title}
+									{episode.audio ? episode.title : 'Coming soon...'}
 								</p>
 							</div>
 						</a>
@@ -132,6 +140,38 @@
 					</li>
 				{/each}
 			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="relative my-12 lg:my-24">
+	<img src={decor1} alt="" class="absolute right-0 top-20 h-full" />
+
+	<div class="container">
+		<div
+			class="relative aspect-video w-full overflow-hidden rounded-2xl border border-brown shadow-lg shadow-brown/30"
+		>
+			<img src={thumbnail} alt="" class="pointer-events-none" />
+
+			<a
+				href="/"
+				class="absolute inset-0 m-auto flex aspect-square w-20 items-center justify-center rounded-full bg-white transition duration-150 hover:opacity-80"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="ml-2 h-10 w-10"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+					/>
+				</svg>
+			</a>
 		</div>
 	</div>
 </div>

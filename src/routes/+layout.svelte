@@ -3,17 +3,18 @@
 	import logo from '$lib/assets/tbm-logo.png';
 
 	const navLinks = [
-		{ title: 'Episodes', href: '#' },
-		{ title: 'About', href: '#' },
+		{ title: 'Episodes', href: '/episodes' },
 		{ title: 'Join as a Guest', href: '#', isExternal: true }
 	];
 </script>
 
 <header class="container flex items-center justify-between gap-10 py-4">
-	<img alt="TBM logo" src={logo} class="h-16 w-[12rem] object-cover" />
+	<a href="/">
+		<img alt="TBM logo" src={logo} class="h-16 w-[12rem] object-cover" />
+	</a>
 
 	<div class="flex items-center gap-6">
-		<ul class="flex items-center gap-6">
+		<ul class="hidden items-center gap-6 lg:flex">
 			{#each navLinks as navItem}
 				<li>
 					<a href={navItem.href}>{navItem.title}</a>
