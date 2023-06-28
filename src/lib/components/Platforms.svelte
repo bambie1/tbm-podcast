@@ -12,7 +12,7 @@
 
 <div class="mt-10 lg:mt-16">
 	<p>AVAILABLE ON</p>
-	<div class="mt-4 flex items-center gap-4">
+	<div class="mt-4 flex flex-wrap items-center gap-4">
 		{#each platforms as platform}
 			<a href={platform.href}><img src={platform.image} alt={platform.title} class="h-10" /></a>
 		{/each}

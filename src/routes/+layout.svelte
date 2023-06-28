@@ -3,8 +3,13 @@
 	import logo from '$lib/assets/tbm-logo.svg';
 
 	const navLinks = [
-		{ title: 'Episodes', href: '/episodes' },
-		{ title: 'Join as a Guest', href: '#', isExternal: true }
+		{ title: 'About', href: '#about' },
+		{ title: 'Episodes', href: '#episodes' },
+		{
+			title: 'Join as a Guest',
+			href: 'https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform',
+			isExternal: true
+		}
 	];
 </script>
 
@@ -17,15 +22,20 @@
 		<ul class="hidden items-center gap-6 lg:flex">
 			{#each navLinks as navItem}
 				<li>
-					<a href={navItem.href}>{navItem.title}</a>
+					<a href={navItem.href} target={navItem.isExternal ? '_blank' : '_self'}>{navItem.title}</a
+					>
 				</li>
 			{/each}
 		</ul>
-		<a href="/" class="rounded-xl bg-brown px-4 py-2 text-white">Send a question</a>
+		<a
+			href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+			target="_blank"
+			class="bg-brown p-4 text-white">Send a question</a
+		>
 	</div>
 </header>
 
-<main class="flex-1 lg:container">
+<main class="mx-auto w-full max-w-7xl flex-1 lg:px-4">
 	<slot />
 </main>
 

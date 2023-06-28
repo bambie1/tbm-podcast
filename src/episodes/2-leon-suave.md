@@ -1,7 +1,7 @@
 ---
 number: 02
 title: How I Manifested my DJ'ing and Event Space Business
-date: June 20, 2023 
+date: July 10, 2023 
 guest:
   name: Leon Suave
   instagram: leon.suave

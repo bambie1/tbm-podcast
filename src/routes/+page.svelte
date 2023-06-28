@@ -1,21 +1,18 @@
 <script>
-	import spotify from '$lib/assets/spotify.png';
-	import google_podcast from '$lib/assets/google_podcast.png';
-	import apple_podcast from '$lib/assets/apple_podcast.png';
+	import decor from '$lib/assets/decor.png';
 	import thumbnail from '$lib/assets/thumbnail.jpg';
+	import host from '$lib/assets/host.png';
+	import Platforms from '$lib/components/Platforms.svelte';
+	import Episode from '$lib/components/Episode.svelte';
 
-	const platforms = [
-		{ image: spotify, title: 'Spotify', href: '#' },
-		{ image: apple_podcast, title: 'Apple podcast', href: '#' },
-		{ image: google_podcast, title: 'Google podcast', href: '#' }
-	];
+	export let data;
 </script>
 
 <svelte:head>
 	<title>The Business Mindset Podcast | By SoPlugged</title>
 </svelte:head>
 
-<div class="my-10 border border-brown lg:my-20">
+<div class="my-2 border border-brown lg:my-20 lg:shadow-3xl">
 	<div class="grid border-b border-brown lg:grid-cols-2">
 		<div
 			class="flex aspect-square flex-col justify-center border-brown bg-light p-4 py-10 lg:border-r lg:p-10"
@@ -26,25 +23,22 @@
 				starting and building their businesses
 			</p>
 
-			<div class="mt-10 lg:mt-16">
-				<p>AVAILABLE ON</p>
-				<div class="mt-4 flex flex-wrap items-center gap-4">
-					{#each platforms as platform}
-						<a href={platform.href}
-							><img src={platform.image} alt={platform.title} class="h-10" /></a
-						>
-					{/each}
-				</div>
-			</div>
+			<Platforms />
 		</div>
-		<div class="relative flex">
-			<img src={thumbnail} alt="" class="object-cover" />
+		<div class="group relative flex">
+			<img
+				src="https://images.pexels.com/photos/6954162/pexels-photo-6954162.jpeg?auto=compress&cs=tinysrgb&w=1600"
+				alt=""
+				class="object-cover"
+			/>
 
 			<div
-				class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80"
+				class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
 			/>
-			<button
-				class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown"
+			<a
+				href="https://www.youtube.com/watch?v=Dkfijg7s76o"
+				target="_blank"
+				class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -60,14 +54,27 @@
 						d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
 					/>
 				</svg>
-			</button>
+			</a>
 		</div>
 	</div>
 
 	<div class="grid lg:grid-cols-2">
-		<div class="order-2 aspect-square bg-pink lg:order-1" />
+		<div class="relative order-2 flex aspect-square justify-start bg-pink lg:order-1">
+			<img src={decor} alt="" class="absolute top-0" />
 
-		<div class="relative flex aspect-square flex-col justify-center p-4 py-10 pb-20 lg:p-10">
+			<div class="absolute bottom-5 right-5 lg:bottom-10 lg:right-10">
+				<p>HOST</p>
+				<p class="font-playfair text-xl font-bold">Nina Barango</p>
+				<p>Founder, SoPlugged</p>
+			</div>
+
+			<img src={host} alt="Nina Barango, Host of TBM Podcast" class="" />
+		</div>
+
+		<div
+			class="relative flex aspect-square flex-col justify-center p-4 py-10 pb-20 lg:order-2 lg:p-10"
+			id="about"
+		>
 			<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">About the Podcast</h2>
 
 			<p>
@@ -82,14 +89,34 @@
 			</p>
 
 			<div class="absolute bottom-0 left-0 right-0 flex">
-				<button class="flex-1 bg-brown p-4 text-white">Ask a question</button>
-				<button class="flex-1 border-t border-brown text-brown">Join as a guest</button>
+				<a
+					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+					target="_blank"
+					class="flex flex-1 items-center justify-center bg-brown p-4 text-white">Ask a question</a
+				>
+				<a
+					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+					class="flex flex-1 items-center justify-center border-t border-brown text-brown"
+					>Join as a guest</a
+				>
 			</div>
 		</div>
 	</div>
 
-	<div class="flex aspect-video flex-col justify-center border-t border-brown bg-light p-4 lg:p-10">
-		<h2 class="mb-4 text-center text-3xl font-bold text-brown xl:text-4xl">Recent Episodes</h2>
+	<div
+		class="flex aspect-video flex-col items-center justify-center border-t border-brown bg-light p-4 text-center lg:p-10"
+		id="episodes"
+	>
+		<h2 class="mb-2 text-3xl font-bold text-brown xl:text-4xl">Recent Episodes</h2>
+		<p>New episode dropped every week</p>
+
+		<div class="mt-10 grid gap-10 text-left lg:mt-20 lg:grid-cols-2 lg:gap-14">
+			{#each data.recentEpisodes as episode}
+				<Episode {episode} />
+			{/each}
+		</div>
+
+		<Platforms />
 	</div>
 
 	<div class="grid border-t border-brown lg:grid-cols-2">

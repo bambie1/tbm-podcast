@@ -1,7 +1,7 @@
 ---
 number: 03
 title: A couple successful entrepreneurs
-date: July 5, 2023
+date: July 17, 2023
 guest:
   name: Marilyn Azichoba & Kennedy Mills
   instagram: mazic_beauty

@@ -11,6 +11,9 @@ export default {
 			},
 			fontFamily: {
 				playfair: ['Playfair Display', 'serif']
+			},
+			boxShadow: {
+				'3xl': '4px 5px 20px rgba(78, 53, 5, .3)'
 			}
 		}
 	},
