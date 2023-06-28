@@ -7,23 +7,47 @@
 
 	import instagram from '$lib/assets/instagram.svg';
 	import youtube from '$lib/assets/youtube.svg';
+	import latestEpisode from '$lib/assets/latest_episode.svg';
 
 	export let data;
+
+	const title = 'The Business Mindset Podcast | By SoPlugged';
+	const metaDescription =
+		'On this weekly podcast, we amplify the stories of Black entrepreneurs in Canada as we explore their journey to building a successful business.';
 </script>
 
 <svelte:head>
-	<title>The Business Mindset Podcast | By SoPlugged</title>
+	<title>{title}</title>
+	<meta name="description" content={metaDescription} />
+
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={metaDescription} />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={metaDescription} />
+
+	<script
+		defer
+		data-domain="tbmpodcast.soplugged.com"
+		src="https://plausible.io/js/script.js"
+	></script>
 </svelte:head>
 
-<div class="my-2 border border-brown lg:my-20 lg:shadow-3xl">
+<div class="relative my-2 border border-brown lg:my-20 lg:shadow-3xl">
+	<img
+		src={latestEpisode}
+		alt="Watch the latest episode"
+		class="absolute -right-40 top-0 hidden lg:block"
+	/>
 	<div class="grid border-b border-brown lg:grid-cols-2">
 		<div
 			class="flex aspect-square flex-col justify-center border-brown bg-light p-4 py-10 lg:border-r lg:p-10"
 		>
 			<h1 class="mb-4 text-4xl font-bold text-brown xl:text-6xl">The Business Mindset Podcast</h1>
 			<p class="lg:text-lg">
-				On this weekly podcast, we interview black entrepreneurs in Canada about their experiences
-				starting and building their businesses
+				On this weekly podcast, we amplify the stories of Black entrepreneurs in Canada as we
+				explore their journey to building a successful business.
 			</p>
 
 			<Platforms />
@@ -42,6 +66,7 @@
 				href="https://www.youtube.com/watch?v=Dkfijg7s76o"
 				target="_blank"
 				class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80"
+				aria-label="Go to Youtube video"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +74,7 @@
 					viewBox="0 0 24 24"
 					stroke-width="1.5"
 					stroke="currentColor"
-					class="ml-2 h-6 w-6 lg:h-10 lg:w-10"
+					class="ml-2 h-10 w-10"
 				>
 					<path
 						stroke-linecap="round"
@@ -95,11 +120,12 @@
 				<a
 					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
 					target="_blank"
-					class="flex flex-1 items-center justify-center bg-brown p-4 text-white">Ask a question</a
+					class="flex flex-1 items-center justify-center border-t border-transparent bg-brown p-4 text-white transition duration-150 hover:border-brown hover:bg-white hover:text-brown"
+					>Ask a question</a
 				>
 				<a
 					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
-					class="flex flex-1 items-center justify-center border-t border-brown text-brown"
+					class="flex flex-1 items-center justify-center border-l border-t border-brown text-brown transition duration-150 hover:border-white hover:bg-brown hover:text-white"
 					>Join as a guest</a
 				>
 			</div>

@@ -8,7 +8,7 @@
 </script>
 
 <a
-	href={!youtube ? '#' : youtube}
+	href={!youtube ? '' : youtube}
 	target="_blank"
 	class={clsx(
 		'group flex items-center gap-4 border-b border-brown/30 pb-2 transition duration-150 ',
@@ -25,7 +25,7 @@
 
 	{#if !youtube}
 		<div
-			class="aspect-square w-10 shrink-0 rounded-sm border border-brown bg-gradient-to-b from-brown to-pink object-cover opacity-25 lg:w-20"
+			class="aspect-square w-10 shrink-0 animate-pulse rounded-sm border border-brown bg-gradient-to-b from-brown to-pink object-cover opacity-25 lg:w-20"
 		/>
 	{/if}
 	<div class="flex-1">
@@ -33,8 +33,8 @@
 			{!youtube ? 'Coming soon...' : title}
 		</h3>
 		<div class="flex w-full flex-wrap items-center justify-between gap-2 lg:gap-10">
-			<p>{guest.name}</p>
-			<p>{date}</p>
+			<p class="text-gray-600">{guest.name}</p>
+			<p class="text-sm uppercase">{date}</p>
 		</div>
 	</div>
 </a>
