@@ -19,7 +19,7 @@
 		<img
 			src={guest.photo}
 			alt=""
-			class="aspect-square w-10 shrink-0 overflow-hidden rounded-sm border border-brown object-cover lg:w-20"
+			class="aspect-square w-10 shrink-0 overflow-hidden rounded-sm border border-brown object-cover transition-all duration-150 group-hover:rounded-lg lg:w-20"
 		/>
 	{/if}
 

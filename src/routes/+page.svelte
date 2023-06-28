@@ -125,7 +125,7 @@
 				>
 				<a
 					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
-					class="flex flex-1 items-center justify-center border-l border-t border-brown text-brown transition duration-150 hover:border-white hover:bg-brown hover:text-white"
+					class="flex flex-1 items-center justify-center border-l border-t border-brown text-brown transition duration-150 hover:bg-light"
 					>Join as a guest</a
 				>
 			</div>
@@ -149,18 +149,18 @@
 	</div>
 
 	<div class="grid border-t border-brown lg:grid-cols-2">
-		<div class="flex aspect-square flex-col justify-center border-r border-brown p-4 lg:p-10">
+		<div class="flex flex-col justify-center border-r border-brown p-4 py-10 lg:p-10">
 			<h1 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">Stay up-to-date</h1>
 			<p class="lg:text-lg">
-				On this weekly podcast, we interview black entrepreneurs in Canada about their experiences
-				starting and building their businesses
+				Follow us on social media for real-time updates, sneak peeks, and engaging conversations.
+				Join our online community and be part of the discussion!
 			</p>
 
 			<div class="mt-10 flex flex-col gap-2">
 				<a
 					href="https://www.instagram.com/tbm_pod/?hl=en"
 					target="_blank"
-					class="inline-flex items-center gap-2"
+					class="inline-flex items-center gap-2 underline"
 				>
 					<img src={instagram} alt="Instagram logo" class="aspect-square h-6" />
 					<span>@tbm_pod</span>
@@ -168,7 +168,7 @@
 				<a
 					href="https://www.instagram.com/tbm_pod/?hl=en"
 					target="_blank"
-					class="inline-flex items-center gap-2"
+					class="inline-flex items-center gap-2 underline"
 				>
 					<img src={youtube} alt="Youtube logo" class="aspect-square h-6" />
 					<span>@tbm_pod</span>
@@ -176,7 +176,7 @@
 			</div>
 		</div>
 		<div class="flex">
-			<img src={ig_thumbnail} alt="" class="object-cover" />
+			<img src={ig_thumbnail} alt="" class="aspect-video object-cover" />
 		</div>
 	</div>
 </div>

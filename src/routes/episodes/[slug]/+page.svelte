@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div class="relative">
-	<img src={decor2} alt="" class="pointer-events-none absolute left-0 top-20 -z-10 h-full" />
+	<img src={decor2} alt="" class="absolute left-0 top-20 -z-10 h-full" />
 	<div class="container grid items-center gap-10 py-4 lg:grid-cols-5 xl:gap-20">
 		<div class="mt-10 lg:col-span-3">
 			<h1 class="mb-4 max-w-lg text-4xl font-bold text-brown xl:text-5xl">
