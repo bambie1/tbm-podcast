@@ -1,9 +1,12 @@
 <script>
 	import decor from '$lib/assets/decor.png';
-	import thumbnail from '$lib/assets/thumbnail.jpg';
+	import ig_thumbnail from '$lib/assets/ig_thumbnail.jpeg';
 	import host from '$lib/assets/host.png';
 	import Platforms from '$lib/components/Platforms.svelte';
 	import Episode from '$lib/components/Episode.svelte';
+
+	import instagram from '$lib/assets/instagram.svg';
+	import youtube from '$lib/assets/youtube.svg';
 
 	export let data;
 </script>
@@ -126,9 +129,28 @@
 				On this weekly podcast, we interview black entrepreneurs in Canada about their experiences
 				starting and building their businesses
 			</p>
+
+			<div class="mt-10 flex flex-col gap-2">
+				<a
+					href="https://www.instagram.com/tbm_pod/?hl=en"
+					target="_blank"
+					class="inline-flex items-center gap-2"
+				>
+					<img src={instagram} alt="Instagram logo" class="aspect-square h-6" />
+					<span>@tbm_pod</span>
+				</a>
+				<a
+					href="https://www.instagram.com/tbm_pod/?hl=en"
+					target="_blank"
+					class="inline-flex items-center gap-2"
+				>
+					<img src={youtube} alt="Youtube logo" class="aspect-square h-6" />
+					<span>@tbm_pod</span>
+				</a>
+			</div>
 		</div>
 		<div class="flex">
-			<img src={thumbnail} alt="" class="object-cover" />
+			<img src={ig_thumbnail} alt="" class="object-cover" />
 		</div>
 	</div>
 </div>
