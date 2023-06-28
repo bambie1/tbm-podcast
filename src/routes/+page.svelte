@@ -1,141 +1,156 @@
 <script>
-	import hostPortrait from '$lib/assets/nina.jpeg';
-	import yourHost from '$lib/assets/your_host.png';
-	import decor1 from '$lib/assets/decor-1.png';
-	import decor2 from '$lib/assets/decor-2.png';
-	import spotify from '$lib/assets/spotify.png';
-	import google_podcast from '$lib/assets/google_podcast.png';
-	import apple_podcast from '$lib/assets/apple_podcast.png';
+	import decor from '$lib/assets/decor.png';
+	import ig_thumbnail from '$lib/assets/ig_thumbnail.jpeg';
+	import host from '$lib/assets/host.png';
+	import Platforms from '$lib/components/Platforms.svelte';
+	import Episode from '$lib/components/Episode.svelte';
 
-	const recentEpisodes = [
-		{
-			guestName: 'Peace Friths',
-			guestImage:
-				'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG90cmFpdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-			title: 'Overcoming Grassroots challenges'
-		},
-		{
-			guestName: 'Ricah Mich',
-			guestImage:
-				'https://images.unsplash.com/photo-1634746715098-6cafbc6a7a00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvdHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-			title: 'Bridging the customer-owner gap'
-		},
-		{
-			guestName: 'Toni Ronke',
-			guestImage:
-				'https://images.unsplash.com/photo-1546791737-97c81ec08179?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHBvdHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
-			title: 'Safely scaling up your business'
-		}
-	];
+	import instagram from '$lib/assets/instagram.svg';
+	import youtube from '$lib/assets/youtube.svg';
 
-	const platforms = [
-		{ image: spotify, title: 'Spotify', href: '#' },
-		{ image: apple_podcast, title: 'Apple podcast', href: '#' },
-		{ image: google_podcast, title: 'Google podcast', href: '#' }
-	];
+	export let data;
 </script>
 
 <svelte:head>
 	<title>The Business Mindset Podcast | By SoPlugged</title>
 </svelte:head>
 
-<div class="relative">
-	<img src={decor1} alt="" class="absolute right-0 top-20 h-full" />
-	<div class="container grid items-center gap-10 py-4 lg:grid-cols-5 xl:gap-20">
-		<div class="max-w-2xl py-10 lg:col-span-3 lg:py-20 xl:py-28">
-			<h1 class="mb-4 max-w-lg text-4xl font-bold text-brown xl:text-6xl">
-				The Business Mindset Podcast
-			</h1>
+<div class="my-2 border border-brown lg:my-20 lg:shadow-3xl">
+	<div class="grid border-b border-brown lg:grid-cols-2">
+		<div
+			class="flex aspect-square flex-col justify-center border-brown bg-light p-4 py-10 lg:border-r lg:p-10"
+		>
+			<h1 class="mb-4 text-4xl font-bold text-brown xl:text-6xl">The Business Mindset Podcast</h1>
 			<p class="lg:text-lg">
 				On this weekly podcast, we interview black entrepreneurs in Canada about their experiences
 				starting and building their businesses
 			</p>
 
-			<div class="my-8 flex items-center gap-4">
-				<img
-					src={hostPortrait}
-					alt="Nina Barango"
-					class="aspect-square w-16 rounded-full border border-brown object-cover"
-				/>
-
-				<div>
-					<p>HOST</p>
-					<p class="font-playfair text-lg font-bold lg:text-xl">Nina Barango</p>
-					<p>Founder, SoPlugged</p>
-				</div>
-			</div>
-
-			<div class="mt-10 lg:mt-16">
-				<p>AVAILABLE ON</p>
-				<div class="mt-4 flex items-center gap-4">
-					{#each platforms as platform}
-						<a href={platform.href}
-							><img src={platform.image} alt={platform.title} class="h-10" /></a
-						>
-					{/each}
-				</div>
-			</div>
+			<Platforms />
 		</div>
+		<div class="group relative flex">
+			<img
+				src="https://images.pexels.com/photos/6954162/pexels-photo-6954162.jpeg?auto=compress&cs=tinysrgb&w=1600"
+				alt=""
+				class="object-cover"
+			/>
 
-		<div class="lg:col-span-2">
-			<p>RECENT EPISODES</p>
-			<ul class="mt-6">
-				{#each recentEpisodes as episode}
-					<li class="inline-flex items-center gap-4 border-b py-3 last-of-type:border-none">
-						<img
-							src={episode.guestImage}
-							alt=""
-							class="aspect-square w-10 overflow-hidden rounded-lg object-cover object-top"
-						/>
-						<div>
-							<p>{episode.guestName}</p>
-							<p class="font-playfair text-lg font-bold text-brown lg:text-xl">{episode.title}</p>
-						</div>
-					</li>
-				{/each}
-			</ul>
+			<div
+				class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
+			/>
+			<a
+				href="https://www.youtube.com/watch?v=Dkfijg7s76o"
+				target="_blank"
+				class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="ml-2 h-6 w-6 lg:h-10 lg:w-10"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+					/>
+				</svg>
+			</a>
 		</div>
 	</div>
-</div>
 
-<div class="relative mt-12">
-	<img src={decor2} alt="" class="absolute left-0 top-0 w-1/3 max-w-[24rem]" />
+	<div class="grid lg:grid-cols-2">
+		<div class="relative order-2 flex aspect-square justify-start bg-pink lg:order-1">
+			<img src={decor} alt="" class="absolute top-0" />
 
-	<div class="container grid items-center gap-10 lg:grid-cols-5 lg:gap-20">
-		<div class="lg:col-span-3">
-			<h2 class="text-2xl font-bold text-brown lg:text-3xl">About the podcast</h2>
-			<p class="mt-4 max-w-2xl">
-				Welcome to "The Business Mindset," your go-to podcast for inspiring stories and insightful
-				conversations with exceptional black entrepreneurs across Canada. Each week, we delve deep
-				into the journeys of these remarkable individuals, exploring their triumphs, challenges, and
-				the lessons they've learned along the way. <br /><br />
+			<div class="absolute bottom-5 right-5 lg:bottom-10 lg:right-10">
+				<p>HOST</p>
+				<p class="font-playfair text-xl font-bold">Nina Barango</p>
+				<p>Founder, SoPlugged</p>
+			</div>
 
-				Our podcast is a celebration of the vibrant and diverse black entrepreneurial community in
-				Canada. We believe in the power of storytelling to inspire, empower, and uplift, and that's
-				exactly what we aim to achieve with each episode. By sharing the experiences and wisdom of
-				successful black entrepreneurs, we seek to inspire aspiring business owners, professionals,
-				and dreamers to pursue their passions and overcome obstacles, no matter their background.
-			</p>
+			<img src={host} alt="Nina Barango, Host of TBM Podcast" class="" />
 		</div>
 
-		<div class="lg:col-span-2">
-			<img src={yourHost} alt="Nina Barango" class="mx-auto w-full object-contain" />
+		<div
+			class="relative flex aspect-square flex-col justify-center p-4 py-10 pb-20 lg:order-2 lg:p-10"
+			id="about"
+		>
+			<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">About the Podcast</h2>
+
+			<p>
+				Welcome to The Business Mindset Podcast, where we empower Black entrepreneurs by sharing
+				inspiring stories, practical tips, and valuable insights from successful Black entrepreneurs
+				in Canada.
+			</p>
+			<br />
+			<p class="mb-10">
+				I'm Nina Barango, your host, and together we'll explore the world of entrepreneurship
+				through the journeys, challenges, and triumphs of our incredible guests. Let's get started!
+			</p>
+
+			<div class="absolute bottom-0 left-0 right-0 flex">
+				<a
+					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+					target="_blank"
+					class="flex flex-1 items-center justify-center bg-brown p-4 text-white">Ask a question</a
+				>
+				<a
+					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+					class="flex flex-1 items-center justify-center border-t border-brown text-brown"
+					>Join as a guest</a
+				>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="relative mt-12">
-	<img src={decor1} alt="" class="absolute right-0 top-20 h-full" />
+	<div
+		class="flex aspect-video flex-col items-center justify-center border-t border-brown bg-light p-4 text-center lg:p-10"
+		id="episodes"
+	>
+		<h2 class="mb-2 text-3xl font-bold text-brown xl:text-4xl">Recent Episodes</h2>
+		<p>New episode dropped every week</p>
 
-	<div class="container grid items-center gap-10 py-4 lg:grid-cols-5 xl:gap-20">
-		<div class="lg:col-span-3">
-			<h2 class="text-2xl font-bold text-brown lg:text-3xl">Got a question for us?</h2>
-			<p class="mt-4 max-w-2xl">
-				Keep them coming! Please click the link below to ask your question, and we'll discuss it on
-				a future episode!
+		<div class="mt-10 grid gap-10 text-left lg:mt-20 lg:grid-cols-2 lg:gap-14">
+			{#each data.recentEpisodes as episode}
+				<Episode {episode} />
+			{/each}
+		</div>
+
+		<Platforms />
+	</div>
+
+	<div class="grid border-t border-brown lg:grid-cols-2">
+		<div class="flex aspect-square flex-col justify-center border-r border-brown p-4 lg:p-10">
+			<h1 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">Stay up-to-date</h1>
+			<p class="lg:text-lg">
+				On this weekly podcast, we interview black entrepreneurs in Canada about their experiences
+				starting and building their businesses
 			</p>
 
-			<a href="#form" class="mt-4 inline-flex text-brown underline">Send in your question</a>
+			<div class="mt-10 flex flex-col gap-2">
+				<a
+					href="https://www.instagram.com/tbm_pod/?hl=en"
+					target="_blank"
+					class="inline-flex items-center gap-2"
+				>
+					<img src={instagram} alt="Instagram logo" class="aspect-square h-6" />
+					<span>@tbm_pod</span>
+				</a>
+				<a
+					href="https://www.instagram.com/tbm_pod/?hl=en"
+					target="_blank"
+					class="inline-flex items-center gap-2"
+				>
+					<img src={youtube} alt="Youtube logo" class="aspect-square h-6" />
+					<span>@tbm_pod</span>
+				</a>
+			</div>
+		</div>
+		<div class="flex">
+			<img src={ig_thumbnail} alt="" class="object-cover" />
 		</div>
 	</div>
 </div>

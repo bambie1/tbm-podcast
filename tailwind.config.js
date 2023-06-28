@@ -4,10 +4,16 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				brown: '#4E3505'
+				brown: '#4E3505',
+				primary: '#EDB18B',
+				light: '#F7F2F2',
+				pink: '#FFA0A3'
 			},
 			fontFamily: {
 				playfair: ['Playfair Display', 'serif']
+			},
+			boxShadow: {
+				'3xl': '4px 5px 20px rgba(78, 53, 5, .3)'
 			}
 		}
 	},
