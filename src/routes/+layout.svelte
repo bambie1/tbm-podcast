@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import logo from '$lib/assets/tbm-logo.png';
+	import logo from '$lib/assets/tbm-logo.svg';
 
 	const navLinks = [
 		{ title: 'Episodes', href: '/episodes' },
@@ -10,7 +10,7 @@
 
 <header class="container flex items-center justify-between gap-10 py-4">
 	<a href="/">
-		<img alt="TBM logo" src={logo} class="h-16 w-[12rem] object-cover" />
+		<img alt="TBM logo" src={logo} class="h-8 object-cover lg:h-16" />
 	</a>
 
 	<div class="flex items-center gap-6">
@@ -25,7 +25,7 @@
 	</div>
 </header>
 
-<main class="flex-1">
+<main class="flex-1 lg:container">
 	<slot />
 </main>
 
