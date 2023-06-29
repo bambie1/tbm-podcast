@@ -2,6 +2,7 @@
 	import spotify from '$lib/assets/spotify.svg';
 	import google_podcast from '$lib/assets/google_podcast.svg';
 	import apple_podcast from '$lib/assets/apple_podcast.svg';
+	import clsx from 'clsx';
 
 	const platforms = [
 		{
@@ -20,11 +21,16 @@
 			href: 'https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9lMmU0MGM2OC9wb2RjYXN0L3Jzcw'
 		}
 	];
+
+	/**
+	 * @type boolean
+	 */
+	export let isCentered = false;
 </script>
 
 <div class="mt-10 lg:mt-16">
 	<p>AVAILABLE ON</p>
-	<div class="mt-4 flex flex-wrap items-center gap-4">
+	<div class={clsx('mt-4 flex flex-wrap items-center  gap-4', isCentered && 'justify-center')}>
 		{#each platforms as platform}
 			<a href={platform.href} class="transition duration-150 hover:grayscale-[.7]"
 				><img src={platform.image} alt={platform.title} class="h-10 shrink-0" /></a

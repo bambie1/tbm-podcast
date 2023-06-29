@@ -32,7 +32,7 @@
 		<h3 class="mb-2 text-ellipsis font-playfair text-xl font-semibold text-brown">
 			{!youtube ? 'Coming soon...' : title}
 		</h3>
-		<div class="flex w-full flex-wrap items-center justify-between gap-2 lg:gap-10">
+		<div class="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-2 lg:gap-x-10">
 			<p class="text-gray-600">{guest.name}</p>
 			<p class="text-sm uppercase">{date}</p>
 		</div>

@@ -10,6 +10,7 @@
 	import latestEpisode from '$lib/assets/latest_episode.svg';
 
 	export let data;
+	const latestYTEpisode = 'https://www.youtube.com/watch?v=Dkfijg7s76o';
 
 	const title = 'The Business Mindset Podcast | By SoPlugged';
 	const metaDescription =
@@ -38,9 +39,9 @@
 	<img
 		src={latestEpisode}
 		alt="Watch the latest episode"
-		class="absolute -right-40 top-0 hidden lg:block"
+		class="absolute -right-40 top-0 hidden xl:block"
 	/>
-	<div class="grid border-b border-brown lg:grid-cols-2">
+	<div class="grid border-b border-brown md:grid-cols-2">
 		<div
 			class="flex aspect-square flex-col justify-center border-brown bg-light p-4 py-10 lg:border-r lg:p-10"
 		>
@@ -56,14 +57,14 @@
 			<img
 				src="https://images.pexels.com/photos/6954162/pexels-photo-6954162.jpeg?auto=compress&cs=tinysrgb&w=1600"
 				alt=""
-				class="object-cover"
+				class="aspect-square object-cover"
 			/>
 
 			<div
 				class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
 			/>
 			<a
-				href="https://www.youtube.com/watch?v=Dkfijg7s76o"
+				href={latestYTEpisode}
 				target="_blank"
 				class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80"
 				aria-label="Go to Youtube video"
@@ -86,8 +87,10 @@
 		</div>
 	</div>
 
-	<div class="grid lg:grid-cols-2">
-		<div class="relative order-2 flex aspect-square justify-start bg-pink lg:order-1">
+	<div class="grid md:grid-cols-2">
+		<div
+			class="relative order-2 flex aspect-square justify-start bg-pink md:order-1 md:aspect-auto"
+		>
 			<img src={decor} alt="" class="absolute top-0" />
 
 			<div class="absolute bottom-5 right-5 lg:bottom-10 lg:right-10">
@@ -96,11 +99,11 @@
 				<p>Founder, SoPlugged</p>
 			</div>
 
-			<img src={host} alt="Nina Barango, Host of TBM Podcast" class="" />
+			<img src={host} alt="Nina Barango, Host of TBM Podcast" class="  object-cover" />
 		</div>
 
 		<div
-			class="relative flex aspect-square flex-col justify-center p-4 py-10 pb-20 lg:order-2 lg:p-10"
+			class="relative flex flex-col items-start justify-center p-4 py-10 pb-20 md:order-2 lg:p-10"
 			id="about"
 		>
 			<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">About the Podcast</h2>
@@ -115,6 +118,12 @@
 				I'm Nina Barango, your host, and together we'll explore the world of entrepreneurship
 				through the journeys, challenges, and triumphs of our incredible guests. Let's get started!
 			</p>
+
+			<a
+				href="#episodes"
+				class="inline-flex border-b border-brown transition-all duration-150 hover:border-transparent hover:text-brown/80"
+				>Check out recent episodes!</a
+			>
 
 			<div class="absolute bottom-0 left-0 right-0 flex">
 				<a
@@ -133,23 +142,23 @@
 	</div>
 
 	<div
-		class="flex aspect-video flex-col items-center justify-center border-t border-brown bg-light p-4 text-center lg:p-10"
+		class="flex aspect-video flex-col items-center justify-center border-t border-brown bg-light p-4 py-10 text-center lg:p-10"
 		id="episodes"
 	>
 		<h2 class="mb-2 text-3xl font-bold text-brown xl:text-4xl">Recent Episodes</h2>
 		<p>New episode dropped every week</p>
 
-		<div class="mt-10 grid gap-10 text-left lg:mt-20 lg:grid-cols-2 lg:gap-14">
+		<div class="mt-10 grid gap-10 text-left md:grid-cols-2 lg:mt-20 lg:gap-14">
 			{#each data.recentEpisodes as episode}
 				<Episode {episode} />
 			{/each}
 		</div>
 
-		<Platforms />
+		<Platforms isCentered />
 	</div>
 
-	<div class="grid border-t border-brown lg:grid-cols-2">
-		<div class="flex flex-col justify-center border-r border-brown p-4 py-10 lg:p-10">
+	<div class="grid border-t border-brown md:grid-cols-2">
+		<div class="flex aspect-video flex-col justify-center border-r border-brown p-4 py-10 lg:p-10">
 			<h1 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">Stay up-to-date</h1>
 			<p class="lg:text-lg">
 				Follow us on social media for real-time updates, sneak peeks, and engaging conversations.
@@ -160,7 +169,7 @@
 				<a
 					href="https://www.instagram.com/tbm_pod/?hl=en"
 					target="_blank"
-					class="inline-flex items-center gap-2 underline"
+					class="inline-flex items-center gap-2 underline transition-all duration-150 hover:no-underline"
 				>
 					<img src={instagram} alt="Instagram logo" class="aspect-square h-6" />
 					<span>@tbm_pod</span>
@@ -168,7 +177,7 @@
 				<a
 					href="https://www.instagram.com/tbm_pod/?hl=en"
 					target="_blank"
-					class="inline-flex items-center gap-2 underline"
+					class="inline-flex items-center gap-2 underline transition-all duration-150 hover:no-underline"
 				>
 					<img src={youtube} alt="Youtube logo" class="aspect-square h-6" />
 					<span>@tbm_pod</span>
