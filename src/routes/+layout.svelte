@@ -61,7 +61,7 @@
 </main>
 
 <footer class="container mt-10 flex items-center justify-between gap-10 py-4">
-	<p>Copyright. 2023</p>
+	<p>Copyright. {new Date().getFullYear()}</p>
 	<p>
 		A <a href="https://www.soplugged.com" target="_blank" class="text-brown underline">SoPlugged</a>
 		production
