@@ -1,13 +1,13 @@
 <script>
 	import decor from '$lib/assets/decor.png';
-	import ig_thumbnail from '$lib/assets/ig_thumbnail.jpeg';
-	import host from '$lib/assets/host.png';
+	import photo_2 from '$lib/assets/cover_2.jpeg';
 	import Platforms from '$lib/components/Platforms.svelte';
 	import Episode from '$lib/components/Episode.svelte';
 
 	import instagram from '$lib/assets/instagram.svg';
 	import youtube from '$lib/assets/youtube.svg';
 	import latestEpisode from '$lib/assets/latest_episode.svg';
+	import coverPhoto from '$lib/assets/cover.jpeg';
 
 	export let data;
 	const latestYTEpisode = 'https://www.youtube.com/watch?v=Dkfijg7s76o';
@@ -89,17 +89,19 @@
 
 	<div class="grid md:grid-cols-2">
 		<div
-			class="relative order-2 flex aspect-square justify-start bg-pink md:order-1 md:aspect-auto"
+			class="relative order-2 flex aspect-square justify-start bg-[#E4C0D1] md:order-1 md:aspect-auto lg:aspect-square"
 		>
 			<img src={decor} alt="" class="absolute top-0" />
 
-			<div class="absolute bottom-5 right-5 lg:bottom-10 lg:right-10">
+			<div
+				class="absolute right-3 top-1/2 max-w-[10rem] -translate-y-1/2 transform text-sm lg:right-16"
+			>
 				<p>HOST</p>
-				<p class="font-playfair text-xl font-bold">Nina Barango</p>
+				<p class="font-playfair font-bold md:text-xl">Nina Barango</p>
 				<p>Founder, SoPlugged</p>
 			</div>
 
-			<img src={host} alt="Nina Barango, Host of TBM Podcast" class="  object-cover" />
+			<img src={coverPhoto} alt="Nina Barango, Host of TBM Podcast" class="w-full object-cover" />
 		</div>
 
 		<div
@@ -158,34 +160,34 @@
 	</div>
 
 	<div class="grid border-t border-brown md:grid-cols-2">
-		<div class="flex aspect-video flex-col justify-center border-r border-brown p-4 py-10 lg:p-10">
+		<div class="flex aspect-square flex-col justify-center border-r border-brown p-4 py-10 lg:p-10">
 			<h1 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">Stay up-to-date</h1>
 			<p class="lg:text-lg">
 				Follow us on social media for real-time updates, sneak peeks, and engaging conversations.
 				Join our online community and be part of the discussion!
 			</p>
 
-			<div class="mt-10 flex flex-col gap-2">
+			<div class="mt-10 grid grid-cols-2 gap-8">
 				<a
 					href="https://www.instagram.com/tbm_pod/?hl=en"
 					target="_blank"
-					class="inline-flex items-center gap-2 underline transition-all duration-150 hover:no-underline"
+					class="inline-flex aspect-video w-full flex-col items-center justify-center gap-4 rounded-sm border border-brown/20 transition-all duration-150 hover:border-brown lg:rounded-lg"
 				>
-					<img src={instagram} alt="Instagram logo" class="aspect-square h-6" />
-					<span>@tbm_pod</span>
+					<img src={instagram} alt="Instagram page" class="aspect-square w-8" />
+					<p>@tbm_pod</p>
 				</a>
 				<a
 					href="https://www.instagram.com/tbm_pod/?hl=en"
 					target="_blank"
-					class="inline-flex items-center gap-2 underline transition-all duration-150 hover:no-underline"
+					class="inline-flex aspect-video w-full flex-col items-center justify-center gap-4 rounded-sm border border-brown/20 transition-all duration-150 hover:border-brown lg:rounded-lg"
 				>
-					<img src={youtube} alt="Youtube logo" class="aspect-square h-6" />
-					<span>@tbm_pod</span>
+					<img src={youtube} alt="Youtube logo" class="aspect-square w-8" />
+					<p>@tbm_pod</p>
 				</a>
 			</div>
 		</div>
 		<div class="flex">
-			<img src={ig_thumbnail} alt="" class="aspect-video object-cover" />
+			<img src={photo_2} alt="" class="aspect-video object-cover" />
 		</div>
 	</div>
 </div>
