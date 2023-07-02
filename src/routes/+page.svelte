@@ -6,11 +6,20 @@
 
 	import instagram from '$lib/assets/instagram.svg';
 	import youtube from '$lib/assets/youtube.svg';
+	import twitter from '$lib/assets/twitter.svg';
+	import linkedin from '$lib/assets/linkedin.svg';
 	import latestEpisode from '$lib/assets/latest_episode.svg';
 	import coverPhoto from '$lib/assets/cover.jpeg';
 
 	export let data;
 	const latestYTEpisode = 'https://www.youtube.com/watch?v=Dkfijg7s76o';
+
+	const socials = [
+		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: instagram, title: 'Instagram page' },
+		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: youtube, title: 'Youtube page' },
+		{ href: 'https://ca.linkedin.com/company/soplugged', img: linkedin, title: 'LinkedIn page' },
+		{ href: 'https://twitter.com/sopluggd', img: twitter, title: 'Twitter page' }
+	];
 
 	const title = 'The Business Mindset Podcast | By SoPlugged';
 	const metaDescription =
@@ -167,26 +176,19 @@
 				Join our online community and be part of the discussion!
 			</p>
 
-			<div class="mt-10 grid grid-cols-2 gap-8">
-				<a
-					href="https://www.instagram.com/tbm_pod/?hl=en"
-					target="_blank"
-					class="inline-flex aspect-video w-full flex-col items-center justify-center gap-4 rounded-sm border border-brown/20 transition-all duration-150 hover:border-brown lg:rounded-lg"
-				>
-					<img src={instagram} alt="Instagram page" class="aspect-square w-8" />
-					<p>@tbm_pod</p>
-				</a>
-				<a
-					href="https://www.instagram.com/tbm_pod/?hl=en"
-					target="_blank"
-					class="inline-flex aspect-video w-full flex-col items-center justify-center gap-4 rounded-sm border border-brown/20 transition-all duration-150 hover:border-brown lg:rounded-lg"
-				>
-					<img src={youtube} alt="Youtube logo" class="aspect-square w-8" />
-					<p>@tbm_pod</p>
-				</a>
+			<div class="mt-10 flex gap-4">
+				{#each socials as social}
+					<a
+						href={social.href}
+						target="_blank"
+						class="inline-flex items-center rounded-sm border border-brown/5 p-2 transition-all duration-150 hover:border-brown lg:rounded-lg lg:p-4"
+					>
+						<img src={social.img} alt={social.title} class="aspect-square w-6" />
+					</a>
+				{/each}
 			</div>
 		</div>
-		<div class="flex">
+		<div class="flex aspect-square">
 			<img src={photo_2} alt="" class="aspect-video object-cover" />
 		</div>
 	</div>
