@@ -17,7 +17,7 @@
 
 	const socials = [
 		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: instagram, title: 'Instagram page' },
-		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: youtube, title: 'Youtube page' },
+		{ href: 'https://www.youtube.com/watch?v=5kI3NRk8ksw', img: youtube, title: 'Youtube page' },
 		{ href: 'https://ca.linkedin.com/company/soplugged', img: linkedin, title: 'LinkedIn page' },
 		{ href: 'https://www.tiktok.com/@tbm_pod', img: tiktok, title: 'Tiktok page' }
 	];
@@ -186,7 +186,7 @@
 			</div>
 		</div>
 		<div class="flex aspect-square">
-			<img src={photo_2} alt="" class="aspect-video object-cover" />
+			<img src={photo_2} alt="" class="w-full object-cover" />
 		</div>
 	</div>
 </div>

@@ -10,11 +10,11 @@
 			title: 'Spotify',
 			href: 'https://open.spotify.com/show/0as6fm4R2X422X03DydlSy'
 		},
-		{
-			image: apple_podcast,
-			title: 'Apple podcast',
-			href: 'https://podcasts.apple.com/us/podcast/the-business-mindset-podcast/id1693400913'
-		},
+		// {
+		// 	image: apple_podcast,
+		// 	title: 'Apple podcast',
+		// 	href: 'https://podcasts.apple.com/us/podcast/the-business-mindset-podcast/id1693400913'
+		// },
 		{
 			image: google_podcast,
 			title: 'Google podcast',
