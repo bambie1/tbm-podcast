@@ -10,6 +10,7 @@
 	import linkedin from '$lib/assets/linkedin.svg';
 	import latestEpisode from '$lib/assets/latest_episode.svg';
 	import coverPhoto from '$lib/assets/cover.jpeg';
+	import ytThumbnail from '$lib/assets/yt_thumbnail.jpg';
 
 	export let data;
 	const latestYTEpisode = 'https://www.youtube.com/watch?v=Dkfijg7s76o';
@@ -63,11 +64,7 @@
 			<Platforms />
 		</div>
 		<div class="group relative flex">
-			<img
-				src="https://images.pexels.com/photos/6954162/pexels-photo-6954162.jpeg?auto=compress&cs=tinysrgb&w=1600"
-				alt=""
-				class="aspect-square object-cover"
-			/>
+			<img src={ytThumbnail} alt="" class="object-cover" />
 
 			<div
 				class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
@@ -138,7 +135,7 @@
 
 			<div class="absolute bottom-0 left-0 right-0 flex">
 				<a
-					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+					href="https://docs.google.com/forms/d/e/1FAIpQLSdPJVg1F__yRsKD2HNlofA6ZJmbSp_NP5BvjeK5IYnwwRaH_w/viewform?usp=sf_link"
 					target="_blank"
 					class="flex flex-1 items-center justify-center border-t border-transparent bg-brown p-4 text-white transition duration-150 hover:border-brown hover:bg-white hover:text-brown"
 					>Ask a question</a

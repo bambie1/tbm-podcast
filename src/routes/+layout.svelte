@@ -48,7 +48,7 @@
 			{/each}
 		</ul>
 		<a
-			href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+			href="https://docs.google.com/forms/d/e/1FAIpQLSdPJVg1F__yRsKD2HNlofA6ZJmbSp_NP5BvjeK5IYnwwRaH_w/viewform?usp=sf_link"
 			target="_blank"
 			class="bg-brown p-4 text-white transition-all duration-150 hover:rounded-md hover:shadow-md"
 			>Send a question</a

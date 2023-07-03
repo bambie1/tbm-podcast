@@ -1,9 +1,7 @@
 ---
-number: 01
+number: 02
 title: Building an online beads business
-date: July 3, 2023
-audio: https://d3ctxlq1ktw2nl.cloudfront.net/staging/2023-5-20/335999558-44100-2-24700e23e6a4e.m4a
-youtube: https://www.youtube.com/watch?v=Dkfijg7s76o
+date: July 10, 2023
 guest:
   name: Rukayat Egbeyemi
   title: Owner, Ashabi Beads

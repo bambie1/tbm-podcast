@@ -1,11 +1,12 @@
 ---
-number: 02
+number: 01
 title: How I Manifested my DJ'ing and Event Space Business
-date: July 10, 2023 
+date: July 3, 2023 
+audio: https://d3ctxlq1ktw2nl.cloudfront.net/staging/2023-5-20/335999558-44100-2-24700e23e6a4e.m4a
+youtube: https://www.youtube.com/watch?v=Dkfijg7s76o
 guest:
   name: Leon Suave
   instagram: leon.suave
-  photo: https://images.unsplash.com/photo-1634746715098-6cafbc6a7a00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHBvdHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60
 ---
 
 In this episode, we talk to Leon Suave, a producer, DJ and event space owner in the GTA. He talks about how he manifested both businesses, the struggles of running an event space in Toronto and the mistakes he made starting out both businesses.

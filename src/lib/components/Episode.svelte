@@ -1,6 +1,8 @@
 <script>
 	import clsx from 'clsx';
 
+	import leon from '$lib/assets/leon_2.jpg';
+
 	/** @type {import('$lib/types').Episode} */
 	export let episode;
 
@@ -17,7 +19,7 @@
 >
 	{#if youtube}
 		<img
-			src={guest.photo}
+			src={guest.photo || leon}
 			alt=""
 			class="aspect-square w-10 shrink-0 overflow-hidden rounded-sm border border-brown object-cover transition-all duration-150 group-hover:rounded-lg lg:w-20"
 		/>
