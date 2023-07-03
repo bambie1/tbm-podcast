@@ -6,20 +6,20 @@
 
 	import instagram from '$lib/assets/instagram.svg';
 	import youtube from '$lib/assets/youtube.svg';
-	import twitter from '$lib/assets/twitter.svg';
+	import tiktok from '$lib/assets/tiktok.svg';
 	import linkedin from '$lib/assets/linkedin.svg';
 	import latestEpisode from '$lib/assets/latest_episode.svg';
 	import coverPhoto from '$lib/assets/cover.jpeg';
-	import ytThumbnail from '$lib/assets/yt_thumbnail.jpg';
+	import ytThumbnail from '$lib/assets/yt_thumbnail.jpeg';
 
 	export let data;
-	const latestYTEpisode = 'https://www.youtube.com/watch?v=Dkfijg7s76o';
+	const latestYTEpisode = 'https://youtu.be/5kI3NRk8ksw';
 
 	const socials = [
 		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: instagram, title: 'Instagram page' },
 		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: youtube, title: 'Youtube page' },
 		{ href: 'https://ca.linkedin.com/company/soplugged', img: linkedin, title: 'LinkedIn page' },
-		{ href: 'https://twitter.com/sopluggd', img: twitter, title: 'Twitter page' }
+		{ href: 'https://www.tiktok.com/@tbm_pod', img: tiktok, title: 'Tiktok page' }
 	];
 
 	const title = 'The Business Mindset Podcast | By SoPlugged';

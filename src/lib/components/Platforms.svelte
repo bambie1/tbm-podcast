@@ -32,7 +32,7 @@
 	<p>AVAILABLE ON</p>
 	<div class={clsx('mt-4 flex flex-wrap items-center  gap-4', isCentered && 'justify-center')}>
 		{#each platforms as platform}
-			<a href={platform.href} class="transition duration-150 hover:grayscale-[.7]"
+			<a href={platform.href} target="_blank" class="transition duration-150 hover:grayscale-[.7]"
 				><img src={platform.image} alt={platform.title} class="h-10 shrink-0" /></a
 			>
 		{/each}

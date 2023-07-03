@@ -3,7 +3,7 @@ number: 01
 title: How I Manifested my DJ'ing and Event Space Business
 date: July 3, 2023 
 audio: https://d3ctxlq1ktw2nl.cloudfront.net/staging/2023-5-20/335999558-44100-2-24700e23e6a4e.m4a
-youtube: https://www.youtube.com/watch?v=Dkfijg7s76o
+youtube: https://youtu.be/5kI3NRk8ksw
 guest:
   name: Leon Suave
   instagram: leon.suave

@@ -14,7 +14,7 @@
 	target="_blank"
 	class={clsx(
 		'group flex items-center gap-4 border-b border-brown/30 pb-2 transition duration-150 ',
-		!youtube ? 'pointer-events-none opacity-70' : 'hover:border-brown'
+		!youtube ? 'pointer-events-none' : 'hover:border-brown'
 	)}
 >
 	{#if youtube}
