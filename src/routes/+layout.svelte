@@ -63,7 +63,8 @@
 <footer class="container mt-10 flex items-center justify-between gap-10 py-4">
 	<p>Copyright. {new Date().getFullYear()}</p>
 	<p>
-		A <a href="https://www.soplugged.com" target="_blank" class="text-brown underline">SoPlugged</a>
-		production
+		Sponsored by <a href="https://www.soplugged.com" target="_blank" class="text-brown underline"
+			>SoPlugged</a
+		>
 	</p>
 </footer>
