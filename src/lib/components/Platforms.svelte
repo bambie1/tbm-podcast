@@ -2,6 +2,7 @@
 	import spotify from '$lib/assets/spotify.svg';
 	import google_podcast from '$lib/assets/google_podcast.svg';
 	import watch_on_youtube from '$lib/assets/watch_on_youtube.svg';
+	import apple_podcast from '$lib/assets/apple_podcast.svg';
 	import clsx from 'clsx';
 
 	const platforms = [
@@ -16,10 +17,15 @@
 			href: 'https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9lMmU0MGM2OC9wb2RjYXN0L3Jzcw'
 		},
 		{
-			image: watch_on_youtube,
-			title: 'Youtube channel',
-			href: 'https://www.youtube.com/@tbm_pod'
+			image: apple_podcast,
+			title: 'Apple Podcast',
+			href: 'https://podcasts.apple.com/us/podcast/the-business-mindset-podcast/id1693400913'
 		}
+		// {
+		// 	image: watch_on_youtube,
+		// 	title: 'Youtube channel',
+		// 	href: 'https://www.youtube.com/@tbm_pod'
+		// }
 	];
 
 	/**

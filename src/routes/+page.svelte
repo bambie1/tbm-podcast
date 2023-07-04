@@ -17,9 +17,9 @@
 
 	const socials = [
 		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: instagram, title: 'Instagram page' },
+		{ href: 'https://www.tiktok.com/@tbm_pod', img: tiktok, title: 'Tiktok page' },
 		{ href: 'https://www.youtube.com/watch?v=5kI3NRk8ksw', img: youtube, title: 'Youtube page' },
-		{ href: 'https://ca.linkedin.com/company/soplugged', img: linkedin, title: 'LinkedIn page' },
-		{ href: 'https://www.tiktok.com/@tbm_pod', img: tiktok, title: 'Tiktok page' }
+		{ href: 'https://ca.linkedin.com/company/soplugged', img: linkedin, title: 'LinkedIn page' }
 	];
 
 	const title = 'The Business Mindset Podcast | By SoPlugged';
