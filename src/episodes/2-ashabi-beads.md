@@ -1,11 +1,11 @@
 ---
 number: 02
-title: Building an online beads business
+title: Dealing with Burnout - Taking a Break From My Business & My Job
 date: July 10, 2023
+youtube: https://www.youtube.com/watch?v=i3XQ41XwL20&pp=ygUcdGhlIGJ1c2luZXNzIG1pbmRzZXQgcG9kY2FzdA%3D%3D
 guest:
   name: Rukayat Egbeyemi
   title: Owner, Ashabi Beads
-  photo: https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cG90cmFpdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60
   instagram: ashabi_beads
 ---
 

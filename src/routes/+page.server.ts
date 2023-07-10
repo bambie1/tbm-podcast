@@ -17,6 +17,6 @@ export async function load() {
 	}
 
 	return {
-		recentEpisodes
+		recentEpisodes: recentEpisodes.reverse()
 	};
 }

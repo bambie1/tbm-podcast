@@ -10,10 +10,12 @@
 	import linkedin from '$lib/assets/linkedin.svg';
 	import latestEpisode from '$lib/assets/latest_episode.svg';
 	import coverPhoto from '$lib/assets/cover.jpeg';
-	import ytThumbnail from '$lib/assets/yt_thumbnail.jpeg';
+	import leonThumbnail from '$lib/assets/yt_thumbnail.jpeg';
+	import ashabiThumbnail from '$lib/assets/ashabi_02.jpeg';
 
 	export let data;
-	const latestYTEpisode = 'https://youtu.be/5kI3NRk8ksw';
+	const latestYTEpisode =
+		'https://www.youtube.com/watch?v=i3XQ41XwL20&pp=ygUcdGhlIGJ1c2luZXNzIG1pbmRzZXQgcG9kY2FzdA%3D%3D';
 
 	const socials = [
 		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: instagram, title: 'Instagram page' },
@@ -63,8 +65,8 @@
 
 			<Platforms />
 		</div>
-		<div class="group relative flex">
-			<img src={ytThumbnail} alt="" class="object-cover" />
+		<div class="group relative flex border-t border-brown md:border-none">
+			<img src={ashabiThumbnail} alt="" class="object-cover object-left" />
 
 			<div
 				class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
@@ -111,7 +113,7 @@
 		</div>
 
 		<div
-			class="relative flex flex-col items-start justify-center p-4 py-10 pb-20 md:order-2 lg:p-10"
+			class="relative flex flex-col items-start justify-center border-brown p-4 py-10 pb-20 md:order-2 md:border-l lg:p-10"
 			id="about"
 		>
 			<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">About the Podcast</h2>

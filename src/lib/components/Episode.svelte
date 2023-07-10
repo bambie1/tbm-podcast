@@ -1,12 +1,10 @@
 <script>
 	import clsx from 'clsx';
 
-	import leon from '$lib/assets/leon_2.jpg';
-
 	/** @type {import('$lib/types').Episode} */
 	export let episode;
 
-	const { guest, title, date, youtube } = episode;
+	const { guest, title, date, youtube, number } = episode;
 </script>
 
 <a
@@ -17,19 +15,12 @@
 		!youtube ? 'pointer-events-none' : 'hover:border-brown'
 	)}
 >
-	{#if youtube}
-		<img
-			src={guest.photo || leon}
-			alt=""
-			class="aspect-square w-10 shrink-0 overflow-hidden rounded-sm border border-brown object-cover transition-all duration-150 group-hover:rounded-lg lg:w-20"
-		/>
-	{/if}
+	<div
+		class="flex aspect-square w-10 shrink-0 items-center justify-center overflow-hidden rounded-sm border border-brown bg-gradient-to-b from-brown/20 to-pink/20 object-cover text-xl font-bold transition-all duration-150 group-hover:rounded-lg group-hover:bg-pink/40 lg:w-20"
+	>
+		{number}
+	</div>
 
-	{#if !youtube}
-		<div
-			class="aspect-square w-10 shrink-0 animate-pulse rounded-sm border border-brown bg-gradient-to-b from-brown to-pink object-cover opacity-25 lg:w-20"
-		/>
-	{/if}
 	<div class="flex-1">
 		<h3 class="mb-2 text-ellipsis font-playfair text-xl font-semibold text-brown">
 			{!youtube ? 'Coming soon...' : title}
