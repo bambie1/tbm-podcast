@@ -1,6 +1,6 @@
 <script>
 	import Platforms from '$lib/components/Platforms.svelte';
-	import ashabiThumbnail from '$lib/assets/yt_thumbnail.png';
+	import ashabiThumbnail from '$lib/assets/yt_thumbnail.jpeg';
 
 	export let data;
 </script>
