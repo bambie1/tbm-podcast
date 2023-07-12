@@ -18,7 +18,7 @@
 					>
 						<img
 							src={episode.guest.photo}
-							alt=""
+							alt={`Portrait of ${episode.guest.name}`}
 							class="aspect-square w-10 flex-shrink-0 overflow-hidden rounded-lg border border-brown/30 object-cover object-top"
 						/>
 						<div>

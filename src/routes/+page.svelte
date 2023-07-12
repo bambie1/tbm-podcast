@@ -1,6 +1,4 @@
 <script>
-	import decor from '$lib/assets/decor.png';
-	import photo_2 from '$lib/assets/cover_2.jpeg';
 	import Platforms from '$lib/components/Platforms.svelte';
 	import Episode from '$lib/components/Episode.svelte';
 
@@ -8,10 +6,10 @@
 	import youtube from '$lib/assets/youtube.svg';
 	import tiktok from '$lib/assets/tiktok.svg';
 	import linkedin from '$lib/assets/linkedin.svg';
+	import decor from '$lib/assets/decor.svg';
 	import latestEpisode from '$lib/assets/latest_episode.svg';
 	import coverPhoto from '$lib/assets/cover.jpeg';
-	import leonThumbnail from '$lib/assets/yt_thumbnail.jpeg';
-	import ashabiThumbnail from '$lib/assets/ashabi_02.jpeg';
+	import yt_thumbnail from '$lib/assets/yt_thumbnail.jpeg';
 
 	export let data;
 	const latestYTEpisode =
@@ -47,135 +45,132 @@
 	></script>
 </svelte:head>
 
-<div class="relative my-2 border border-brown lg:my-20 lg:shadow-3xl">
-	<img
-		src={latestEpisode}
-		alt="Watch the latest episode"
-		class="absolute -right-40 top-0 hidden xl:block"
-	/>
-	<div class="grid border-b border-brown md:grid-cols-2">
-		<div
-			class="flex aspect-square flex-col justify-center border-brown bg-light p-4 py-10 lg:border-r lg:p-10"
-		>
-			<h1 class="mb-4 text-4xl font-bold text-brown xl:text-6xl">The Business Mindset Podcast</h1>
-			<p class="lg:text-lg">
-				On this weekly podcast, we amplify the stories of Black entrepreneurs in Canada as we
-				explore their journey to building a successful business.
-			</p>
+<div>
+	<div class="relative grid gap-8 py-20 lg:gap-32 lg:py-28">
+		<img src={decor} alt="" class="absolute left-0 right-0 top-0 -z-10 w-full opacity-40" />
+		<div class="container">
+			<div class="mx-auto max-w-2xl text-center">
+				<h1 class="mb-4 text-4xl font-bold text-brown xl:text-7xl">
+					The Business <br />Mindset Podcast
+				</h1>
+				<p class="lg:text-lg">
+					On this weekly podcast, we amplify the stories of Black entrepreneurs in Canada as we
+					explore their journey to building a successful business.
+				</p>
 
-			<Platforms />
+				<Platforms isCentered />
+			</div>
 		</div>
-		<div class="group relative flex border-t border-brown md:border-none">
-			<img src={ashabiThumbnail} alt="" class="object-cover object-left" />
 
-			<div
-				class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
+		<div class="container relative">
+			<hr class="mx-auto mb-4 w-[60%] border-brown md:mb-6 md:h-4" />
+
+			<img
+				src={latestEpisode}
+				alt="Watch the latest episode"
+				class="absolute -top-40 right-0 z-10 hidden scale-75 xl:block"
 			/>
 			<a
 				href={latestYTEpisode}
-				target="_blank"
-				class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80"
-				aria-label="Go to Youtube video"
+				class="group relative mx-auto flex aspect-video overflow-hidden rounded-2xl shadow xl:max-w-5xl"
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="ml-2 h-10 w-10"
+				<img
+					src={yt_thumbnail}
+					alt="Episode 2 - Dealing with Burnout"
+					class="transition duration-500 group-hover:scale-[1.02]"
+				/>
+
+				<div
+					class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
+				/>
+				<span
+					class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80"
+					aria-label="Go to Youtube video"
 				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
-					/>
-				</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="ml-2 h-10 w-10"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+						/>
+					</svg>
+				</span>
 			</a>
-		</div>
-	</div>
 
-	<div class="grid md:grid-cols-2">
-		<div
-			class="relative order-2 flex aspect-square justify-start bg-[#E4C0D1] md:order-1 md:aspect-auto lg:aspect-square"
-		>
-			<img src={decor} alt="" class="absolute top-0" />
-
-			<div
-				class="absolute right-3 top-1/2 max-w-[10rem] -translate-y-1/2 transform text-sm lg:right-16"
-			>
-				<p>HOST</p>
-				<p class="font-playfair font-bold md:text-xl">Nina Barango</p>
-				<p>Founder, SoPlugged</p>
-			</div>
-
-			<img src={coverPhoto} alt="Nina Barango, Host of TBM Podcast" class="w-full object-cover" />
+			<hr class="mx-auto mt-5 w-[60%] border-brown md:mt-10 md:h-4" />
 		</div>
 
-		<div
-			class="relative flex flex-col items-start justify-center border-brown p-4 py-10 pb-20 md:order-2 md:border-l lg:p-10"
-			id="about"
-		>
-			<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">About the Podcast</h2>
+		<div class="container">
+			<h2 class="mb-2 text-center text-3xl font-bold text-brown xl:text-4xl">Recent Episodes</h2>
+			<p class="text-center">New episode dropped every week</p>
 
-			<p>
-				Welcome to The Business Mindset Podcast, where we empower Black entrepreneurs by sharing
-				inspiring stories, practical tips, and valuable insights from successful Black entrepreneurs
-				in Canada.
-			</p>
-			<br />
-			<p class="mb-10">
-				I'm Nina Barango, your host, and together we'll explore the world of entrepreneurship
-				through the journeys, challenges, and triumphs of our incredible guests. Let's get started!
-			</p>
+			<div class="mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+				{#each data.recentEpisodes as episode}
+					<Episode {episode} />
+				{/each}
 
-			<a
-				href="#episodes"
-				class="inline-flex border-b border-brown transition-all duration-150 hover:border-transparent hover:text-brown/80"
-				>Check out recent episodes!</a
-			>
-
-			<div class="absolute bottom-0 left-0 right-0 flex">
-				<a
-					href="https://docs.google.com/forms/d/e/1FAIpQLSdPJVg1F__yRsKD2HNlofA6ZJmbSp_NP5BvjeK5IYnwwRaH_w/viewform?usp=sf_link"
-					target="_blank"
-					class="flex flex-1 items-center justify-center border-t border-transparent bg-brown p-4 text-white transition duration-150 hover:border-brown hover:bg-white hover:text-brown"
-					>Ask a question</a
-				>
-				<a
-					href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
-					class="flex flex-1 items-center justify-center border-l border-t border-brown text-brown transition duration-150 hover:bg-light"
-					>Join as a guest</a
-				>
+				{#each [0, 1] as _}
+					<div
+						class="hidden aspect-square w-full animate-pulse overflow-hidden rounded-xl bg-pink/20 lg:block"
+					/>
+				{/each}
 			</div>
 		</div>
-	</div>
 
-	<div
-		class="flex aspect-video flex-col items-center justify-center border-t border-brown bg-light p-4 py-10 text-center lg:p-10"
-		id="episodes"
-	>
-		<h2 class="mb-2 text-3xl font-bold text-brown xl:text-4xl">Recent Episodes</h2>
-		<p>New episode dropped every week</p>
+		<div
+			class="container relative grid items-center gap-10 overflow-hidden bg-pink/20 py-10 md:grid-cols-2 md:rounded-2xl md:px-10 lg:gap-20 lg:py-20"
+		>
+			<div>
+				<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">About the podcast</h2>
+				<p>
+					Welcome to The Business Mindset Podcast, where we empower Black entrepreneurs by sharing
+					inspiring stories, practical tips, and valuable insights from successful Black
+					entrepreneurs in Canada.
+				</p>
+				<p class="mt-4">
+					I'm Nina Barango, your host, and together we'll explore the world of entrepreneurship
+					through the journeys, challenges, and triumphs of our incredible guests. Let's get
+					started!
+				</p>
 
-		<div class="mt-10 grid gap-10 text-left md:grid-cols-2 lg:mt-20 lg:gap-14">
-			{#each data.recentEpisodes as episode}
-				<Episode {episode} />
-			{/each}
+				<div class="mt-8 flex items-center gap-4 md:mt-16">
+					<a
+						href="https://docs.google.com/forms/d/e/1FAIpQLSdPJVg1F__yRsKD2HNlofA6ZJmbSp_NP5BvjeK5IYnwwRaH_w/viewform?usp=sf_link"
+						target="_blank"
+						class="flex flex-1 items-center justify-center border border-transparent bg-brown p-4 text-white transition duration-150 hover:-translate-y-1"
+						>Ask a question</a
+					>
+					<a
+						href="https://docs.google.com/forms/d/18X65OJ4XbRhaEIa_Ge-ByqCgj5YkHG4CBnsvf_N_o60/viewform"
+						class="flex flex-1 items-center justify-center border border-brown p-4 text-brown transition duration-150 hover:-translate-y-1"
+						>Join as a guest</a
+					>
+				</div>
+			</div>
+			<img
+				src={coverPhoto}
+				alt="Portait of Nina Barango"
+				class="absolute bottom-0 right-0 top-0 mx-auto hidden h-full w-1/2 object-cover md:block lg:max-w-lg"
+			/>
 		</div>
 
-		<Platforms isCentered />
-	</div>
+		<div class="container grid items-center gap-4 md:grid-cols-2 md:gap-10">
+			<div>
+				<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">Stay up-to-date</h2>
+				<p class="max-w-xl lg:text-lg">
+					Follow us on social media for real-time updates, sneak peeks, and engaging conversations.
+					Join our online community and be part of the discussion!
+				</p>
+			</div>
 
-	<div class="grid border-t border-brown md:grid-cols-2">
-		<div class="flex aspect-square flex-col justify-center border-r border-brown p-4 py-10 lg:p-10">
-			<h1 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">Stay up-to-date</h1>
-			<p class="lg:text-lg">
-				Follow us on social media for real-time updates, sneak peeks, and engaging conversations.
-				Join our online community and be part of the discussion!
-			</p>
-
-			<div class="mt-10 flex gap-4">
+			<div class="flex gap-4 md:ml-auto">
 				{#each socials as social}
 					<a
 						href={social.href}
@@ -186,9 +181,6 @@
 					</a>
 				{/each}
 			</div>
-		</div>
-		<div class="flex aspect-square">
-			<img src={photo_2} alt="" class="w-full object-cover" />
 		</div>
 	</div>
 </div>

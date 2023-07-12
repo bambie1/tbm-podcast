@@ -50,17 +50,19 @@
 		<a
 			href="https://docs.google.com/forms/d/e/1FAIpQLSdPJVg1F__yRsKD2HNlofA6ZJmbSp_NP5BvjeK5IYnwwRaH_w/viewform?usp=sf_link"
 			target="_blank"
-			class="bg-brown p-4 text-white transition-all duration-150 hover:rounded-md hover:shadow-md"
+			class="bg-brown p-4 text-white transition-all duration-150 hover:-translate-y-1"
 			>Send a question</a
 		>
 	</div>
 </header>
 
-<main class="mx-auto w-full max-w-7xl flex-1 lg:px-4">
+<main>
 	<slot />
 </main>
 
-<footer class="container mt-10 flex items-center justify-between gap-10 py-4">
+<footer
+	class="container mt-8 flex items-center justify-between gap-10 border-t border-brown/20 py-4 lg:py-10"
+>
 	<p>Copyright. {new Date().getFullYear()}</p>
 	<p>
 		Sponsored by <a href="https://www.soplugged.com" target="_blank" class="text-brown underline"

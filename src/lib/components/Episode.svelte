@@ -4,30 +4,29 @@
 	/** @type {import('$lib/types').Episode} */
 	export let episode;
 
-	const { guest, title, date, youtube, number } = episode;
+	const { guest, title, date, youtube, number, slug } = episode;
 </script>
 
-<a
-	href={!youtube ? '' : youtube}
-	target="_blank"
-	class={clsx(
-		'group flex items-center gap-4 border-b border-brown/30 pb-2 transition duration-150 ',
-		!youtube ? 'pointer-events-none' : 'hover:border-brown'
-	)}
->
+<a href={youtube} target="_blank" class="group flex w-full flex-col">
 	<div
-		class="flex aspect-square w-10 shrink-0 items-center justify-center overflow-hidden rounded-sm border border-brown bg-gradient-to-b from-brown/20 to-pink/20 object-cover text-xl font-bold transition-all duration-150 group-hover:rounded-lg group-hover:bg-pink/40 lg:w-20"
+		class="relative flex aspect-square w-full overflow-hidden rounded-xl border border-transparent transition-all duration-500 group-hover:border-brown"
 	>
-		{number}
+		<img
+			src={guest.photo}
+			alt={`Portrait of ${guest.name}`}
+			class="mb-4 h-full w-full object-cover transition-all duration-500 group-hover:scale-[1.07]"
+		/>
+
+		<div
+			class="absolute bottom-5 right-5 flex aspect-square w-10 items-center justify-center rounded-lg bg-white text-brown"
+		>
+			{number}
+		</div>
 	</div>
 
-	<div class="flex-1">
-		<h3 class="mb-2 text-ellipsis font-playfair text-xl font-semibold text-brown">
-			{!youtube ? 'Coming soon...' : title}
-		</h3>
-		<div class="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-2 lg:gap-x-10">
-			<p class="text-gray-600">{guest.name}</p>
-			<p class="text-sm uppercase">{date}</p>
-		</div>
+	<p class="mb-2 mt-4 font-playfair font-bold text-brown group-hover:underline">{title}</p>
+	<div class="flex items-start justify-between gap-10">
+		<p class="text-sm uppercase">{guest.name}</p>
+		<p class="shrink-0 text-sm">{date}</p>
 	</div>
 </a>

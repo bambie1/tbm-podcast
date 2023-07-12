@@ -20,12 +20,12 @@
 			image: apple_podcast,
 			title: 'Apple Podcast',
 			href: 'https://podcasts.apple.com/us/podcast/the-business-mindset-podcast/id1693400913'
+		},
+		{
+			image: watch_on_youtube,
+			title: 'Youtube channel',
+			href: 'https://www.youtube.com/@tbm_pod'
 		}
-		// {
-		// 	image: watch_on_youtube,
-		// 	title: 'Youtube channel',
-		// 	href: 'https://www.youtube.com/@tbm_pod'
-		// }
 	];
 
 	/**

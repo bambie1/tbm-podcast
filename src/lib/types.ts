@@ -1,5 +1,5 @@
 export type Episode = {
-	number: number;
+	number: string;
 	title: string;
 	audio?: string;
 	youtube?: string;
