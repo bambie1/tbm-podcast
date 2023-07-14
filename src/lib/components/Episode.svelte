@@ -18,15 +18,17 @@
 		/>
 
 		<div
-			class="absolute bottom-5 right-5 flex aspect-square w-10 items-center justify-center rounded-lg bg-white text-brown"
+			class="absolute bottom-2 right-2 flex aspect-square w-7 items-center justify-center rounded bg-white text-sm text-brown md:bottom-5 md:right-5 md:w-10 md:rounded-lg md:text-base"
 		>
 			{number}
 		</div>
 	</div>
 
-	<p class="mb-2 mt-4 font-playfair font-bold text-brown group-hover:underline">{title}</p>
-	<div class="flex items-start justify-between gap-10">
-		<p class="text-sm uppercase">{guest.name}</p>
-		<p class="shrink-0 text-sm">{date}</p>
+	<p class="mb-2 mt-4 line-clamp-1 w-full font-playfair font-bold text-brown group-hover:underline">
+		{title}
+	</p>
+	<div class="flex flex-wrap items-start justify-between lg:gap-10">
+		<p class="mr-4 text-xs uppercase md:text-sm">{guest.name}</p>
+		<p class="shrink-0 text-xs md:text-sm">{date}</p>
 	</div>
 </a>
