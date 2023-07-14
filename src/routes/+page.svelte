@@ -81,10 +81,10 @@
 				/>
 
 				<div
-					class="absolute left-1/2 top-1/2 flex aspect-square w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150"
+					class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform animate-pulse items-center justify-center rounded-full bg-white/80 transition duration-150 md:w-24"
 				/>
 				<span
-					class="absolute left-1/2 top-1/2 flex aspect-square w-20 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80"
+					class="absolute left-1/2 top-1/2 flex aspect-square w-16 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-white text-brown transition duration-150 hover:bg-white/80 md:w-20"
 					aria-label="Go to Youtube video"
 				>
 					<svg
@@ -93,7 +93,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="ml-2 h-10 w-10"
+						class="ml-2 h-8 w-8 md:h-10 md:w-10"
 					>
 						<path
 							stroke-linecap="round"

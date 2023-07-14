@@ -28,7 +28,7 @@
 		{title}
 	</p>
 	<div class="flex flex-wrap items-start justify-between lg:gap-10">
-		<p class="mr-4 text-xs uppercase md:text-sm">{guest.name}</p>
-		<p class="shrink-0 text-xs md:text-sm">{date}</p>
+		<p class="mr-4 text-sm uppercase">{guest.name}</p>
+		<p class="shrink-0 text-sm">{date}</p>
 	</div>
 </a>
