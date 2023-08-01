@@ -9,10 +9,10 @@
 	import decor from '$lib/assets/decor.svg';
 	import latestEpisode from '$lib/assets/latest_episode.svg';
 	import coverPhoto from '$lib/assets/cover.jpeg';
-	import yt_thumbnail from '$lib/assets/thumbnail.jpeg';
+	import yt_thumbnail from '$lib/assets/thumbnail.png';
 
 	export let data;
-	const latestYTEpisode = 'https://www.youtube.com/watch?v=o9d1YazeIY8';
+	const latestYTEpisode = 'https://www.youtube.com/watch?v=KHm4mGthcJ0';
 
 	const socials = [
 		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: instagram, title: 'Instagram page' },
@@ -117,9 +117,11 @@
 					<Episode {episode} />
 				{/each}
 
-				<!-- <div
-					class="hidden aspect-square w-full animate-pulse overflow-hidden rounded-xl bg-pink/20 lg:block"
-				/> -->
+				{#each Array(3) as _}
+					<div
+						class="hidden aspect-square w-full animate-pulse overflow-hidden rounded-xl bg-pink/20 lg:block"
+					/>
+				{/each}
 			</div>
 		</div>
 
