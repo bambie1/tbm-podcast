@@ -11,5 +11,4 @@ guest:
 ---
 
 In this episode, we talk to Leon Suave, a producer, DJ and event space owner in the GTA. He talks about how he manifested both businesses, the struggles of running an event space in Toronto and the mistakes he made starting out both businesses.
-
-Connect With Us! Follow the podcast on Instagram: [@tbm_pod](https://www.instagram.com/tbm_pod) Follow Leon on Instagram: [@tbm_pod](https://www.instagram.com/leon.suave)
+ 

@@ -11,10 +11,4 @@ guest:
 ---
 
 Thinking of starting a Nigerian food business in Canada? In our latest episode, Marilyn & Kennedy share lessons from running a Nigerian restaurant and a luxury hair business in Ottawa. We talk about taking risks, dealing with negative customer reviews, pricing your products correctly, and scaling up your business. Tune in on your favourite podcast platforms and learn how to run multiple businesses successfully.
-
-Connect With Us! Follow the podcast on Instagram: [https://www.instagram.com/tbm_pod/](@tbm_pod)
-
-Follow Mazic Beauty on Instagram: [https://www.instagram.com/mazicbeauty](@mazicbeauty) and shop their ready-to-ship glueless wigs and hair accessories at [https://⁠www.mazicbeauty.com](mazicbeauty.com)⁠
-
-Follow Mills Kitchenn on Instagram [https://www.instagram.com/millskitchenn](@millskitchenn) and order your favourite Nigerian food on Uber, Skip the Dishes or on their website at [https://www.millskitchen.ca](millskitchen.ca)
-
+ 

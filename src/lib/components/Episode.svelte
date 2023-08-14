@@ -1,6 +1,4 @@
 <script>
-	import clsx from 'clsx';
-
 	/** @type {import('$lib/types').Episode} */
 	export let episode;
 

@@ -10,4 +10,5 @@ export type Episode = {
 	};
 	slug: string;
 	date: string;
+	content: string;
 };

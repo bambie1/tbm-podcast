@@ -11,12 +11,12 @@ export async function load() {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Episode, 'slug'>;
-			const episode = { ...metadata, slug };
+			const episode = { ...metadata, slug, content: file.default.render().html };
 			recentEpisodes.push(episode);
 		}
 	}
 
 	return {
-		recentEpisodes
+		recentEpisodes: recentEpisodes.reverse()
 	};
 }

@@ -11,7 +11,3 @@ guest:
 ---
 
 Thinking of turning the things you love doing into a side hustle or a business? In our latest episode, Deinye Eporwei talks about transitioning from building a tech startup to starting a business from her hobby. We also discuss delegation, the tax benefits of being a sole proprietor and all the things you need to transition your hobby to a business.
-
-Connect With Us! Follow the podcast on Instagram: [https://www.instagram.com/tbm_pod/](@tbm_pod)
-
-Follow Bare Skin on Instagram: [https://www.instagram.com/baresk.in/](⁠@baresk.in) and shop their handmade bar soap and body products. This podcast is brought to you by SoPlugged, a search-friendly directory of Black-owned businesses in Canada.
