@@ -109,7 +109,9 @@
 		</div>
 
 		<div class="container">
-			<h2 class="mb-2 text-center text-3xl font-bold text-brown xl:text-4xl">Recent Episodes</h2>
+			<h2 class="mb-2 text-center text-3xl font-bold text-brown xl:text-4xl" id="episodes">
+				Recent Episodes
+			</h2>
 			<p class="text-center">New episode dropped every week</p>
 
 			<div class="mt-10 grid grid-cols-2 gap-2 md:gap-10 lg:grid-cols-4">
