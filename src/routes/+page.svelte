@@ -163,12 +163,13 @@
 		</div>
 
 		<div class="container grid items-center gap-4 md:grid-cols-2 md:gap-10">
-			<div>
+			<div class="grid">
 				<h2 class="mb-4 text-3xl font-bold text-brown xl:text-4xl">Stay up-to-date</h2>
 				<p class="max-w-xl lg:text-lg">
 					Follow us on social media for real-time updates, sneak peeks, and engaging conversations.
 					Join our online community and be part of the discussion!
 				</p>
+				<a href="/episodes" class="mt-4 text-brown underline">All episodes</a>
 			</div>
 
 			<div class="flex gap-4 md:ml-auto">

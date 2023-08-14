@@ -61,7 +61,7 @@
 </main>
 
 <footer
-	class="container mt-8 flex items-center justify-between gap-10 border-t border-brown/20 py-4 lg:py-10"
+	class="container mt-8 flex flex-wrap items-center justify-between gap-x-10 gap-y-4 border-t border-brown/20 py-4 lg:py-10"
 >
 	<p>Copyright. {new Date().getFullYear()}</p>
 	<p>
