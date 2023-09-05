@@ -2,7 +2,7 @@
 	/** @type {import('$lib/types').Episode} */
 	export let episode;
 
-	const { guest, title, date, youtube, number, slug } = episode;
+	const { guest, title, date, youtube, number } = episode;
 </script>
 
 <a href={youtube} target="_blank" class="group flex w-full flex-col">
@@ -22,7 +22,10 @@
 		</div>
 	</div>
 
-	<p class="mb-2 mt-4 line-clamp-1 w-full font-playfair font-bold text-brown group-hover:underline">
+	<p
+		class="mb-2 mt-4 line-clamp-1 w-full font-playfair font-bold text-brown group-hover:underline"
+		{title}
+	>
 		{title}
 	</p>
 	<div class="flex flex-wrap items-start justify-between lg:gap-10">

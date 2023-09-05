@@ -12,7 +12,7 @@
 	import yt_thumbnail from '$lib/assets/thumbnail.png';
 
 	export let data;
-	const latestYTEpisode = 'https://www.youtube.com/watch?v=NeSAiXXAHsg';
+	const latestYTEpisode = 'https://www.youtube.com/watch?v=kBIQq1P91YY';
 
 	const socials = [
 		{ href: 'https://www.instagram.com/tbm_pod/?hl=en', img: instagram, title: 'Instagram page' },
@@ -118,6 +118,11 @@
 				{#each data.recentEpisodes as episode}
 					<Episode {episode} />
 				{/each}
+
+				<a
+					class="flex aspect-square w-full items-center justify-center rounded-xl bg-pink/10 p-4 underline transition-all duration-200 hover:bg-pink/20 hover:no-underline"
+					href="/episodes">View all episodes</a
+				>
 			</div>
 		</div>
 

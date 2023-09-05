@@ -7,11 +7,10 @@ export async function load() {
 
 	for (const path in paths) {
 		const file = paths[path];
-		const slug = path.split('/').at(-1)?.replace('.md', '');
 
-		if (file && typeof file === 'object' && 'metadata' in file && slug) {
-			const metadata = file.metadata as Omit<Episode, 'slug'>;
-			const episode = { ...metadata, slug, content: file.default.render().html };
+		if (file && typeof file === 'object' && 'metadata' in file) {
+			const metadata = file.metadata as Episode;
+			const episode = { ...metadata, content: file.default.render().html };
 			recentEpisodes.push(episode);
 		}
 	}

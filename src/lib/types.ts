@@ -7,8 +7,7 @@ export type Episode = {
 		name: string;
 		photo: string;
 		instagram?: string;
-	};
-	slug: string;
+	}; 
 	date: string;
 	content: string;
 };
