@@ -13,5 +13,5 @@ Visit [here](https://tbmpodcast.soplugged.com/)
 
 ## Tech stack
 
-- Built with [Svelte kit](https://kit.svelte.dev/) and [Tailwind](https://tailwindcss.com)
+- Built with [Astro](https://docs.astro.build/en/getting-started/) and [Tailwind](https://tailwindcss.com)
 - Hosted on [Vercel](https://vercel.com)
