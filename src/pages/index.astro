@@ -1,16 +1,70 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PlatformContainer from "../components/PlatformContainer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <div class="flex-1 flex flex-col px-4 max-w-7xl mx-auto w-full">
+    <nav class="py-4 flex items-center justify-between gap-4">
+      <img src="/logo.svg" alt="SoPlugged Logo" class="w-10 h-10" />
+
+      <div class="flex items-center gap-4 lg:gap-8">
+        <a href="#" target="_blank" class="underline">Watch all episodes</a>
+        <a href="#" target="_blank" class="py-3 px-6 bg-white/10 rounded-full"
+          >Contact Us</a
+        >
+      </div>
+    </nav>
+
+    <main class="flex-1 py-10 flex items-center justify-center">
+      <div
+        class="grid gap-10 items-center 2xl:gap-32 xl:gap-20 lg:grid-cols-2 w-full"
+      >
+        <div class="relative">
+          <h1
+            class="font-bold text-white text-3xl xl:text-6xl 2xl:text-8xl 2xl:leading-[.85]"
+          >
+            The <span class="relative block"
+              >Business <span
+                class="absolute caveat text-xl xl:text-3xl -top-16 right-20 -rotate-12 text-accent"
+                aria-hidden>hosted by<br />Nina Barango</span
+              ></span
+            > Mindset
+          </h1>
+
+          <p class="mt-4 mb-8">
+            On this weekly podcast, we amplify the stories of Black
+            entrepreneurs in Canada as we explore their journey to building a
+            successful business.
+          </p>
+
+          <div class="flex items-center gap-4">
+            <PlatformContainer src="/spotify.png" />
+            <PlatformContainer src="/apple.svg" />
+            <PlatformContainer src="/youtube.png" />
+          </div>
+        </div>
+
+        <div>
+          <div class="aspect-video w-full bg-white/10 rounded-2xl relative">
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black rounded-full w-16 h-16"
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 flex items-center justify-between flex-wrap">
+      <div class="bg-white/10 rounded-full opacity-80 py-4 px-8">
+        A podcast by <a
+          href="https://www.soplugged.com"
+          target="_blank"
+          class="underline">SoPlugged</a
+        >
+      </div>
+      <span>© 2024</span>
+    </footer>
+  </div>
+</BaseLayout>
