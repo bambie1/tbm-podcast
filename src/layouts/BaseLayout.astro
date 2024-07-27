@@ -1,0 +1,49 @@
+---
+import "@fontsource-variable/montserrat";
+
+const socialImageURL = new URL("/og-image.png", Astro.url);
+---
+
+<style is:global>
+  @font-face {
+    font-family: "BeautySalon";
+    src: url("/fonts/BeautySalon_Script_Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .caveat {
+    font-family: "BeautySalon", cursive;
+  }
+
+  h1 {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta
+      name="description"
+      content="On this weekly podcast, we amplify the stories of Black
+            entrepreneurs in Canada as we explore their journey to building a
+            successful business."
+    />
+    <meta property="og:site_name" content="TBM Podcast" />
+    <meta property="og:image" content={socialImageURL} />
+    <meta
+      property="og:title"
+      content="The Business Mindset Podcast | SoPlugged"
+    />
+    <title>The Business Mindset Podcast | SoPlugged</title>
+  </head>
+  <body class="bg-black text-subdued flex min-h-dvh">
+    <slot />
+  </body>
+</html>

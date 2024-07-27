@@ -1,0 +1,17 @@
+---
+const { imageSrc, href, imageAlt } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class="bg-white/20 opacity-70 hover:opacity-100 transition duration-100 w-16 h-16 rounded-full p-[6px]"
+>
+  <div class="rounded-full w-full h-full overflow-hidden">
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      class="h-full pointer-events-none object-cover"
+    />
+  </div>
+</a>

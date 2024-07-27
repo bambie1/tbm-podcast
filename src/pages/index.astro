@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PlatformContainer from "../components/PlatformContainer.astro";
+
+const videoId = "Ug1EL2sjprY";
+---
+
+<BaseLayout>
+  <div
+    class="flex-1 flex flex-col px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
+  >
+    <nav class="py-4 flex items-center justify-between gap-4">
+      <img src="/logo.svg" alt="SoPlugged Logo" class="w-10 h-10" />
+
+      <div class="flex items-center gap-4 lg:gap-8">
+        <a
+          href="https://www.youtube.com/@tbm_pod/videos"
+          target="_blank"
+          class="underline hidden md:block">Watch all episodes</a
+        >
+        <a
+          href="mailto:hello@soplugged.com?subject=The%20Business%20Mindset%20Podcast%20form"
+          target="_blank"
+          class="py-3 px-6 bg-white/10 rounded-full">Contact Us</a
+        >
+      </div>
+    </nav>
+
+    <main class="flex-1 py-10 flex items-center justify-center">
+      <div
+        class="grid gap-10 lg:gap-10 items-center 2xl:gap-32 xl:gap-20 lg:grid-cols-2 w-full"
+      >
+        <div class="relative">
+          <h1
+            class="font-extrabold text-white tracking-tight text-6xl lg:text-7xl 2xl:text-8xl 2xl:leading-[.85] lg:leading-[.85]"
+          >
+            The <span class="relative block"
+              >Business <span
+                class="absolute caveat text-3xl xl:text-4xl -top-12 font-thin right-20 -rotate-12 text-accent"
+                aria-hidden>hosted by<br />Nina Barango</span
+              ></span
+            > Mindset
+          </h1>
+
+          <p class="mt-4 mb-8">
+            On this weekly podcast, we amplify the stories of Black
+            entrepreneurs in Canada as we explore their journey to building a
+            successful business.
+          </p>
+
+          <div class="flex items-center gap-4">
+            <PlatformContainer
+              imageSrc="/spotify.png"
+              imageAlt="Spotify Podcasts"
+              href="https://open.spotify.com/show/0as6fm4R2X422X03DydlSy"
+            />
+            <PlatformContainer
+              imageSrc="/apple.svg"
+              imageAlt="Apple Podcasts"
+              href="https://podcasts.apple.com/us/podcast/the-business-mindset-podcast/id1693400913"
+            />
+            <PlatformContainer
+              imageSrc="/youtube.png"
+              imageAlt="Watch on YouTube"
+              href="https://www.youtube.com/@tbm_pod"
+            />
+          </div>
+
+          <hr class="lg:hidden mt-10 opacity-15 mb-0" />
+        </div>
+
+        <div class="relative">
+          <span
+            class="caveat hidden lg:block text-2xl tracking-wide font-thin leading-6 -top-16 right-5 absolute"
+            >Watch the<br /> latest episode</span
+          >
+
+          <img
+            src="/arrow_doodle.svg"
+            alt=""
+            class="-top-10 hidden lg:block -right-10 absolute"
+          />
+          <div class="aspect-video w-full">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="border overflow-hidden border-white/50 rounded-2xl"
+              title="The Business Mindset Podcast - Latest Episode"></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-4 flex items-center justify-between flex-wrap">
+      <div class="bg-white/10 rounded-full opacity-80 py-4 px-8">
+        A podcast by <a
+          href="https://www.soplugged.com"
+          target="_blank"
+          class="underline">SoPlugged</a
+        >
+      </div>
+      <span>© 2024</span>
+    </footer>
+  </div>
+</BaseLayout>
