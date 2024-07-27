@@ -1,5 +1,7 @@
 ---
 import "@fontsource-variable/montserrat";
+
+const socialImageURL = new URL("/og-image.png", Astro.url);
 ---
 
 <style is:global>
@@ -34,6 +36,7 @@ import "@fontsource-variable/montserrat";
             successful business."
     />
     <meta property="og:site_name" content="TBM Podcast" />
+    <meta property="og:image" content={socialImageURL} />
     <meta
       property="og:title"
       content="The Business Mindset Podcast | SoPlugged"
