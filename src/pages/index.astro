@@ -6,7 +6,9 @@ const videoId = "Ug1EL2sjprY";
 ---
 
 <BaseLayout>
-  <div class="flex-1 flex flex-col px-4 max-w-7xl mx-auto w-full">
+  <div
+    class="flex-1 flex flex-col px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
+  >
     <nav class="py-4 flex items-center justify-between gap-4">
       <img src="/logo.svg" alt="SoPlugged Logo" class="w-10 h-10" />
 
@@ -24,11 +26,11 @@ const videoId = "Ug1EL2sjprY";
 
     <main class="flex-1 py-10 flex items-center justify-center">
       <div
-        class="grid gap-16 items-center 2xl:gap-32 xl:gap-20 lg:grid-cols-2 w-full"
+        class="grid gap-16 lg:gap-10 items-center 2xl:gap-32 xl:gap-20 lg:grid-cols-2 w-full"
       >
         <div class="relative">
           <h1
-            class="font-extrabold text-white tracking-tight text-6xl xl:text-6xl 2xl:text-8xl 2xl:leading-[.85]"
+            class="font-extrabold text-white tracking-tight text-6xl lg:text-7xl 2xl:text-8xl 2xl:leading-[.85] lg:leading-[.85]"
           >
             The <span class="relative block"
               >Business <span
@@ -74,13 +76,16 @@ const videoId = "Ug1EL2sjprY";
             alt=""
             class="-top-10 hidden lg:block -right-10 absolute"
           />
-          <iframe
-            width="100%"
-            height="315"
-            src={`https://www.youtube.com/embed/${videoId}?rel=0`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            class="border overflow-hidden border-white/50 rounded-2xl"></iframe>
+          <div class="aspect-video w-full">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="border overflow-hidden border-white/50 rounded-2xl"
+            ></iframe>
+          </div>
         </div>
       </div>
     </main>
