@@ -43,11 +43,11 @@ try {
       >
         <div class="relative">
           <h1
-            class="font-bold text-white text-3xl xl:text-6xl 2xl:text-8xl 2xl:leading-[.85]"
+            class="font-extrabold text-white text-3xl xl:text-6xl 2xl:text-8xl 2xl:leading-[.85]"
           >
             The <span class="relative block"
               >Business <span
-                class="absolute caveat text-xl xl:text-3xl -top-16 right-20 -rotate-12 text-accent"
+                class="absolute caveat text-xl xl:text-4xl -top-12 font-thin right-20 -rotate-12 text-accent"
                 aria-hidden>hosted by<br />Nina Barango</span
               ></span
             > Mindset
@@ -79,13 +79,14 @@ try {
         </div>
 
         <div class="relative">
-          <span class="caveat text-2xl leading-6 -top-20 right-10 absolute"
+          <span
+            class="caveat text-2xl tracking-wide font-thin leading-6 -top-20 right-10 absolute"
             >Check out our<br /> latest episode</span
           >
           <iframe
             width="100%"
             height="315"
-            src={`https://www.youtube.com/embed/${videoId}`}
+            src={`https://www.youtube.com/embed/${videoId}?rel=0`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             class="border overflow-hidden border-white/50 rounded-2xl"></iframe>
